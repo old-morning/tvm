@@ -1,0 +1,121 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:58 ; elapsed = 00:03:23 . Memory (MB): peak = 1503.270 ; gain = 1099.754 ; free physical = 6809 ; free virtual = 9074
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:58 ; elapsed = 00:03:23 . Memory (MB): peak = 1503.270 ; gain = 1099.754 ; free physical = 6809 ; free virtual = 9074
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'load_pad_2d<ap_uint<64>, 2, 16>' into 'load' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:207).
+INFO: [XFORM 203-603] Inlining function 'load_2d<ap_uint<64>, 32, 256>' into 'load' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:220).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:59 ; elapsed = 00:03:24 . Memory (MB): peak = 1503.270 ; gain = 1099.754 ; free physical = 6807 ; free virtual = 9072
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:59 ; elapsed = 00:03:24 . Memory (MB): peak = 1503.270 ; gain = 1099.754 ; free physical = 6800 ; free virtual = 9065
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:62) in function 'load' for pipelining.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'reset_mem<ap_uint<64>, 2>' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:33).
+WARNING: [XFORM 203-503] Cannot unroll loop 'memcpy.inp_mem.V.addr1.inputs.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:67) in function 'load': cannot completely unroll a loop with a variable trip count.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:37) in function 'reset_mem<ap_uint<64>, 2>': cannot completely unroll a loop with a variable trip count.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:38) in function 'reset_mem<ap_uint<64>, 2>' completely with a factor of 2.
+WARNING: [XFORM 203-180] Applying partition directive (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:177:1) and reshape directive (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:177:1) on the same variable 'wgt_mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:176) may lead to unexpected synthesis behaviors.
+INFO: [XFORM 203-131] Reshaping array 'inp_mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:175) in dimension 2 completely.
+INFO: [XFORM 203-131] Reshaping array 'wgt_mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:176) in dimension 2 with a block factor of 16.
+INFO: [XFORM 203-101] Partitioning array 'wgt_mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:176) in dimension 2 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:89:12) to (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:89:12) in function 'load'... converting 4 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'load' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:170)...13 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:00 ; elapsed = 00:03:25 . Memory (MB): peak = 1503.270 ; gain = 1099.754 ; free physical = 6774 ; free virtual = 9039
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:62:19) in function 'load' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:86:18) in function 'load' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+WARNING: [XFORM 203-631] Renaming function 'reset_mem<ap_uint<64>, 2>' to 'reset_mem' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:37:30)
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'data_port' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:67:12). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'data_port' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:89:12). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-472] Inferring partial write operation for 'mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:40:6)
+INFO: [HLS 200-472] Inferring partial write operation for 'inp_mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:67:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'wgt_mem[0].V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:89:12)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:00 ; elapsed = 00:03:26 . Memory (MB): peak = 1503.270 ; gain = 1099.754 ; free physical = 6762 ; free virtual = 9027
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'load' ...
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'Mul_LUT' on 'range_V', which is not an operation.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'Mul_LUT' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:200) on 'lshr' operation ('lshr_ln200_1', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:200) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'Mul_LUT' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:200) on 'lshr' operation ('lshr_ln200_1', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:200) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'Mul_LUT' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:200) on 'zext' operation ('zext_ln200_1', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:200) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'Mul_LUT' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:92->/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:220) on 'add' operation ('sram_idx.V', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:91->/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:220) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'Mul_LUT' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:200) on 'lshr' operation ('lshr_ln200', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:200) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'Mul_LUT' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:200) on 'lshr' operation ('lshr_ln200', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:200) due to incompatible operation sets.
+WARNING: [SYN 201-303] Cannot apply functional unit assignment of 'Mul_LUT' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:64->/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:207) on 'zext' operation ('zext_ln209_1', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:64->/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:207) due to incompatible operation sets.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'reset_mem' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Function contains subloop(s) not being unrolled.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 95.13 seconds; current allocated memory: 180.741 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 180.845 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [TECH 200-23] The specified latency 4 on variable ('y_offset_1.V', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:203) is larger than the max latency 0 of core 'Mul_LUT'. The max latency 0 is selected.
+WARNING: [TECH 200-23] The specified latency 4 on variable ('y_offset_0.V', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:201) is larger than the max latency 0 of core 'Mul_LUT'. The max latency 0 is selected.
+WARNING: [SCHED 204-21] Estimated delay (9.27ns) of 'mul' operation ('y_offset_0.V', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:201) exceeds the target cycle time (target cycle time: 7ns, clock uncertainty: 0.875ns, effective cycle time: 6.12ns).
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.wgt_mem.V.addr4.weights.V'.
+WARNING: [SCHED 204-68] The II Violation in module 'load' (Loop: memcpy.wgt_mem.V.addr4.weights.V): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('wgt_mem_0_V_addr_write_ln89', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:89->/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:220) of variable 'or_ln89', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:89->/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:220 on array 'wgt_mem_0_V' and 'load' operation ('wgt_mem_0_V_load', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:89->/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:220) on array 'wgt_mem_0_V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 4.
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.inp_mem.V.addr1.inputs.V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+WARNING: [SCHED 204-21] Estimated clock period (9.275ns) exceeds the target (target clock period: 7ns, clock uncertainty: 0.875ns, effective delay budget: 6.125ns).
+WARNING: [SCHED 204-21] The critical path in module 'load' consists of the following:
+	'mul' operation ('y_offset_0.V', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:201) [55]  (9.28 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 181.539 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.29 seconds; current allocated memory: 182.504 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'reset_mem' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'reset_mem'.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 182.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'load/data_port' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'load/inputs_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'load/weights_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'load/load_queue_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'load/g2l_dep_queue_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'load/l2g_dep_queue_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'load/inp_mem_V' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'load/wgt_mem_0_V' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'load/wgt_mem_1_V' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'load' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' and 'weights_V' to AXI-Lite port CONTROL_BUS.
+INFO: [SYN 201-210] Renamed object name 'load_mul_16s_4ns_16_1_1' to 'load_mul_16s_4ns_bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'load_mul_16s_4ns_bkb': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load'.
+INFO: [HLS 200-111]  Elapsed time: 0.38 seconds; current allocated memory: 184.874 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 107.82 MHz
+INFO: [RTMG 210-282] Generating pipelined core: 'load_mul_16s_4ns_bkb_Mul_LUT_0'
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:02 ; elapsed = 00:03:34 . Memory (MB): peak = 1503.270 ; gain = 1099.754 ; free physical = 6754 ; free virtual = 9019
+INFO: [VHDL 208-304] Generating VHDL RTL for load.
+INFO: [VLOG 209-307] Generating Verilog RTL for load.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-10] Creating and opening project '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/pynq_1x16_i8w8a32_15_15_18_17/vta_compute'.
+INFO: [HLS 200-10] Adding design file '/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc' to the project
+INFO: [HLS 200-10] Creating and opening solution '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/pynq_1x16_i8w8a32_15_15_18_17/vta_compute/soln'.

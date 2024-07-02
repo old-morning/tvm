@@ -1,0 +1,579 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Jun 20 10:59:41 2024
+# Process ID: 7006
+# Current directory: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17
+# Command line: vivado -mode tcl -source /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/scripts/vivado.tcl -tclargs /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../build/hardware/xilinx/hls/pynq_1x16_i8w8a32_15_15_18_17 /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../build/hardware/xilinx/include/vta_config.tcl
+# Log file: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vivado.log
+# Journal file: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vivado.jou
+#-----------------------------------------------------------
+source /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/scripts/vivado.tcl
+# set scripts_vivado_version 2020.1
+# set current_vivado_version [version -short]
+# if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
+#    puts ""
+#    catch {common::send_msg_id "BD_TCL-109" "ERROR" "This script was generated using Vivado \
+#     <$scripts_vivado_version> and is being run in <$current_vivado_version> of Vivado."}
+#    return 1
+# }
+# if { [llength $argv] eq 2 } {
+#   set ip_path     [lindex $argv 0]
+#   set vta_config  [lindex $argv 1]
+# } else {
+#   puts "Arg list incomplete: <path to ip dir> <path to vta_config.py>"
+#   return 1
+# }
+# source $vta_config
+## proc const {name value} {
+##     uplevel 1 [list set $name $value]
+##     uplevel 1 [list trace var $name w {error constant ;#} ]
+## }
+## const CFLAGS "-I/mnt/e/_AI/tvm/include -I/mnt/e/_AI/tvm/3rdparty/vta-hw/include -I/mnt/e/_AI/tvm/3rdparty/dlpack/include -I/mnt/e/_AI/tvm/3rdparty/dmlc-core/include -DVTA_TARGET=sim -DVTA_HW_VER=0.0.2 -DVTA_LOG_INP_WIDTH=3 -DVTA_LOG_WGT_WIDTH=3 -DVTA_LOG_ACC_WIDTH=5 -DVTA_LOG_BATCH=0 -DVTA_LOG_BLOCK=4 -DVTA_LOG_UOP_BUFF_SIZE=15 -DVTA_LOG_INP_BUFF_SIZE=15 -DVTA_LOG_WGT_BUFF_SIZE=18 -DVTA_LOG_ACC_BUFF_SIZE=17 -DVTA_LOG_BLOCK_IN=4 -DVTA_LOG_BLOCK_OUT=4 -DVTA_LOG_OUT_WIDTH=3 -DVTA_LOG_OUT_BUFF_SIZE=15 -DVTA_LOG_BUS_WIDTH=6 -DVTA_IP_REG_MAP_RANGE=0x1000 -DVTA_FETCH_ADDR=0x43C00000 -DVTA_LOAD_ADDR=0x43C01000 -DVTA_COMPUTE_ADDR=0x43C02000 -DVTA_STORE_ADDR=0x43C03000 -DVTA_FETCH_INSN_COUNT_OFFSET=16 -DVTA_FETCH_INSN_ADDR_OFFSET=24 -DVTA_LOAD_INP_ADDR_OFFSET=16 -DVTA_LOAD_WGT_ADDR_OFFSET=24 -DVTA_COMPUTE_DONE_WR_OFFSET=16 -DVTA_COMPUTE_DONE_RD_OFFSET=24 -DVTA_COMPUTE_UOP_ADDR_OFFSET=32 -DVTA_COMPUTE_BIAS_ADDR_OFFSET=40 -DVTA_STORE_OUT_ADDR_OFFSET=16 -DVTA_COHERENT_ACCESSES=true"
+## const TARGET sim
+## const FPGA_DEVICE xc7z020clg484-1
+## const FPGA_FAMILY zynq-7000
+## const FPGA_BOARD None
+## const FPGA_BOARD_REV None
+## const FPGA_PERIOD 7
+## const FPGA_FREQ 100
+## const INP_MEM_AXI_RATIO 2
+## const WGT_MEM_AXI_RATIO 16
+## const OUT_MEM_AXI_RATIO 2
+## const INP_MEM_BANKS 1
+## const WGT_MEM_BANKS 2
+## const OUT_MEM_BANKS 1
+## const INP_MEM_WIDTH 128
+## const WGT_MEM_WIDTH 1024
+## const OUT_MEM_WIDTH 128
+## const INP_MEM_DEPTH 2048
+## const WGT_MEM_DEPTH 1024
+## const OUT_MEM_DEPTH 2048
+## const NUM_WGT_MEM_URAM 0
+## const AXI_CACHE_BITS 1111
+## const AXI_PROT_BITS 000
+## const IP_REG_MAP_RANGE 0x1000
+## const FETCH_BASE_ADDR 0x43C00000
+## const LOAD_BASE_ADDR 0x43C01000
+## const COMPUTE_BASE_ADDR 0x43C02000
+## const STORE_BASE_ADDR 0x43C03000
+# set target            $TARGET
+# set device            $FPGA_DEVICE
+# set device_family     $FPGA_FAMILY
+# set clock_freq        $FPGA_FREQ
+# set board             $FPGA_BOARD
+# set board_rev         $FPGA_BOARD_REV
+# set inp_part          $INP_MEM_BANKS
+# set inp_mem_width     $INP_MEM_WIDTH
+# set inp_mem_depth     $INP_MEM_DEPTH
+# set wgt_part          $WGT_MEM_BANKS
+# set wgt_mem_width     $WGT_MEM_WIDTH
+# set wgt_mem_depth     $WGT_MEM_DEPTH
+# set out_part          $OUT_MEM_BANKS
+# set out_mem_width     $OUT_MEM_WIDTH
+# set out_mem_depth     $OUT_MEM_DEPTH
+# set num_wgt_mem_uram  $NUM_WGT_MEM_URAM
+# set axi_cache         $AXI_CACHE_BITS
+# set axi_prot          $AXI_PROT_BITS
+# set ip_reg_map_range  $IP_REG_MAP_RANGE
+# set fetch_base_addr   $FETCH_BASE_ADDR
+# set load_base_addr    $LOAD_BASE_ADDR
+# set compute_base_addr $COMPUTE_BASE_ADDR
+# set store_base_addr   $STORE_BASE_ADDR
+# set proj_name vta
+# set design_name $proj_name
+# set proj_path "."
+# set ip_lib "ip_lib"
+# set fetch_ip "${ip_path}/vta_fetch/soln/impl/ip/xilinx_com_hls_fetch_1_0.zip"
+# set load_ip "${ip_path}/vta_load/soln/impl/ip/xilinx_com_hls_load_1_0.zip"
+# set compute_ip "${ip_path}/vta_compute/soln/impl/ip/xilinx_com_hls_compute_1_0.zip"
+# set store_ip "${ip_path}/vta_store/soln/impl/ip/xilinx_com_hls_store_1_0.zip"
+# create_project -force $proj_name $proj_path -part $device
+create_project: Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:07 . Memory (MB): peak = 2003.535 ; gain = 0.023 ; free physical = 6504 ; free virtual = 9062
+# if {$board != "None" && $board_rev != "None"} {
+#   set_property board_part $board:$board_rev [current_project]
+# }
+# file mkdir $ip_lib
+# set_property ip_repo_paths $ip_lib [current_project]
+# update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/mnt/e/_AI/tools/Xilinx/Vivado/2020.1/data/ip'.
+# update_ip_catalog -add_ip $fetch_ip -repo_path $ip_lib
+INFO: [IP_Flow 19-949] Unzipped '/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../build/hardware/xilinx/hls/pynq_1x16_i8w8a32_15_15_18_17/vta_fetch/soln/impl/ip/xilinx_com_hls_fetch_1_0.zip' into repository '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib'.
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib'
+# update_ip_catalog -add_ip $load_ip -repo_path $ip_lib
+INFO: [IP_Flow 19-949] Unzipped '/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../build/hardware/xilinx/hls/pynq_1x16_i8w8a32_15_15_18_17/vta_load/soln/impl/ip/xilinx_com_hls_load_1_0.zip' into repository '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib'.
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib'
+# update_ip_catalog -add_ip $compute_ip -repo_path $ip_lib
+INFO: [IP_Flow 19-949] Unzipped '/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../build/hardware/xilinx/hls/pynq_1x16_i8w8a32_15_15_18_17/vta_compute/soln/impl/ip/xilinx_com_hls_compute_1_0.zip' into repository '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib'.
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib'
+# update_ip_catalog -add_ip $store_ip -repo_path $ip_lib
+INFO: [IP_Flow 19-949] Unzipped '/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../build/hardware/xilinx/hls/pynq_1x16_i8w8a32_15_15_18_17/vta_store/soln/impl/ip/xilinx_com_hls_store_1_0.zip' into repository '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib'.
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib'
+# create_bd_design $design_name
+Wrote  : </mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/vta.bd> 
+create_bd_design: Time (s): cpu = 00:00:00.89 ; elapsed = 00:00:12 . Memory (MB): peak = 2067.453 ; gain = 21.051 ; free physical = 6440 ; free virtual = 9038
+# current_bd_design $design_name
+# proc init_fifo_property {fifo width_bytes depth} {
+#   set_property -dict [ list \
+#     CONFIG.FIFO_Implementation_rach {Common_Clock_Distributed_RAM} \
+#     CONFIG.FIFO_Implementation_wach {Common_Clock_Distributed_RAM} \
+#     CONFIG.FIFO_Implementation_wrch {Common_Clock_Distributed_RAM} \
+#     CONFIG.Full_Flags_Reset_Value {1} \
+#     CONFIG.INTERFACE_TYPE {AXI_STREAM} \
+#     CONFIG.Input_Depth_axis $depth \
+#     CONFIG.Reset_Type {Asynchronous_Reset} \
+#     CONFIG.TDATA_NUM_BYTES $width_bytes \
+#   ] $fifo
+# }
+# proc init_bram_property {bram width depth} {
+#   set_property -dict [ list \
+#     CONFIG.use_bram_block {Stand_Alone} \
+#     CONFIG.Assume_Synchronous_Clk {true} \
+#     CONFIG.Byte_Size {8} \
+#     CONFIG.Enable_32bit_Address {true} \
+#     CONFIG.Enable_B {Use_ENB_Pin} \
+#     CONFIG.Memory_Type {True_Dual_Port_RAM} \
+#     CONFIG.Read_Width_A $width \
+#     CONFIG.Read_Width_B $width \
+#     CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
+#     CONFIG.Register_PortB_Output_of_Memory_Primitives {false} \
+#     CONFIG.Use_Byte_Write_Enable {true} \
+#     CONFIG.Use_RSTA_Pin {true} \
+#     CONFIG.Use_RSTB_Pin {true} \
+#     CONFIG.Write_Depth_A $depth \
+#     CONFIG.Write_Width_A $width \
+#     CONFIG.Write_Width_B $width \
+#   ] $bram
+# }
+# set proc_sys_reset \
+#   [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset ]
+create_bd_cell: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2067.453 ; gain = 0.000 ; free physical = 6283 ; free virtual = 8885
+# set pll_clk [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 pll_clk ]
+# set_property -dict [ list \
+#   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ $clock_freq \
+#   CONFIG.RESET_PORT {resetn} \
+#   CONFIG.RESET_TYPE {ACTIVE_LOW} \
+#   CONFIG.USE_LOCKED {false} \
+# ] $pll_clk
+# set axi_smc0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 axi_smc0 ]
+# set_property -dict [ list \
+#   CONFIG.NUM_MI {1} \
+#   CONFIG.NUM_SI {5} \
+# ] $axi_smc0
+# set axi_xbar \
+#   [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_xbar ]
+# set_property -dict [ list \
+#   CONFIG.NUM_MI {4} \
+#   CONFIG.NUM_SI {1} \
+# ] $axi_xbar
+# set fetch_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:fetch:1.0 fetch_0 ]
+# set_property -dict [ list \
+#   CONFIG.C_M_AXI_INS_PORT_CACHE_VALUE $axi_cache \
+#   CONFIG.C_M_AXI_INS_PORT_PROT_VALUE $axi_prot \
+# ] $fetch_0
+# set load_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:load:1.0 load_0 ]
+# set_property -dict [ list \
+#   CONFIG.C_M_AXI_DATA_PORT_CACHE_VALUE $axi_cache \
+#   CONFIG.C_M_AXI_DATA_PORT_PROT_VALUE $axi_prot \
+# ] $load_0
+# set compute_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:compute:1.0 compute_0 ]
+# set_property -dict [ list \
+#   CONFIG.C_M_AXI_DATA_PORT_CACHE_VALUE $axi_cache \
+#   CONFIG.C_M_AXI_DATA_PORT_PROT_VALUE $axi_prot \
+#   CONFIG.C_M_AXI_UOP_PORT_CACHE_VALUE $axi_cache \
+#   CONFIG.C_M_AXI_UOP_PORT_PROT_VALUE $axi_prot \
+# ] $compute_0
+# set store_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:store:1.0 store_0 ]
+# set_property -dict [ list \
+#   CONFIG.C_M_AXI_DATA_PORT_CACHE_VALUE $axi_cache \
+#   CONFIG.C_M_AXI_DATA_PORT_PROT_VALUE $axi_prot \
+# ] $store_0
+# set cmd_queue_list {load_queue gemm_queue store_queue}
+# foreach cmd_queue $cmd_queue_list {
+#   set tmp_cmd_queue [ create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.2 $cmd_queue ]
+#   # Width is 16B (128b, as set in hw_spec.h), depth is 512 (depth of FIFO on Zynq 7000 and Zynq Ultrascale+)
+#   # TODO: derive it from vta_config.h
+#   [ init_fifo_property $tmp_cmd_queue 16 512 ]
+# }
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /load_queueExecuting the post_config_ip from bd
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /load_queueExecuting the post_config_ip from bd
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /gemm_queueExecuting the post_config_ip from bd
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /gemm_queueExecuting the post_config_ip from bd
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /store_queueExecuting the post_config_ip from bd
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /store_queueExecuting the post_config_ip from bd
+# set dep_queue_list {l2g_queue g2l_queue g2s_queue s2g_queue}
+# foreach dep_queue $dep_queue_list {
+#   set tmp_dep_queue [ create_bd_cell -type ip -vlnv xilinx.com:ip:fifo_generator:13.2 $dep_queue ]
+#   # Width is 1B (min width), depth is 1024
+#   # TODO: derive it from vta_config.h
+#   [ init_fifo_property $tmp_dep_queue 1 1024 ]
+# }
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /l2g_queueExecuting the post_config_ip from bd
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /l2g_queueExecuting the post_config_ip from bd
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /g2l_queueExecuting the post_config_ip from bd
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /g2l_queueExecuting the post_config_ip from bd
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /g2s_queueExecuting the post_config_ip from bd
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /g2s_queueExecuting the post_config_ip from bd
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /s2g_queueExecuting the post_config_ip from bd
+INFO: [xilinx.com:ip:fifo_generator:13.2-5968] /s2g_queueExecuting the post_config_ip from bd
+# for {set i 0} {$i < $inp_part} {incr i} {
+#   # Create instance: inp_mem, and set properties
+#   set inp_mem [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 inp_mem_${i} ]
+#   [ init_bram_property $inp_mem $inp_mem_width $inp_mem_depth ]
+#   # If module has more than 1 mem port, the naming convention changes
+#   if {$inp_part > 1} {
+#     set porta [get_bd_intf_pins load_0/inp_mem_${i}_V_PORTA]
+#     set portb [get_bd_intf_pins compute_0/inp_mem_${i}_V_PORTA]
+#   } else {
+#     set porta [get_bd_intf_pins load_0/inp_mem_V_PORTA]
+#     set portb [get_bd_intf_pins compute_0/inp_mem_V_PORTA]
+#   }
+#   # Create interface connections
+#   connect_bd_intf_net -intf_net load_0_inp_mem_V_PORTA \
+#     [get_bd_intf_pins $inp_mem/BRAM_PORTA] \
+#     $porta
+#   connect_bd_intf_net -intf_net compute_0_inp_mem_V_PORTA \
+#     [get_bd_intf_pins $inp_mem/BRAM_PORTB] \
+#     $portb
+# }
+# for {set i 0} {$i < $wgt_part} {incr i} {
+#   # Create instance: wgt_mem, and set properties
+#   set wgt_mem [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 wgt_mem_${i} ]
+#   [ init_bram_property $wgt_mem $wgt_mem_width $wgt_mem_depth ]
+#   # If module has more than 1 mem port, the naming convention changes
+#   if {$wgt_part > 1} {
+#     set porta [get_bd_intf_pins load_0/wgt_mem_${i}_V_PORTA]
+#     set portb [get_bd_intf_pins compute_0/wgt_mem_${i}_V_PORTA]
+#   } else {
+#     set porta [get_bd_intf_pins load_0/wgt_mem_V_PORTA]
+#     set portb [get_bd_intf_pins compute_0/wgt_mem_V_PORTA]
+#   }
+#   # Create interface connections
+#   connect_bd_intf_net -intf_net load_0_wgt_mem_${i}_V_PORTA \
+#     [get_bd_intf_pins $wgt_mem/BRAM_PORTA] \
+#     $porta
+#   connect_bd_intf_net -intf_net compute_0_wgt_mem_${i}_V_PORTA \
+#     [get_bd_intf_pins $wgt_mem/BRAM_PORTB] \
+#     $portb
+#   if { $device_family eq "zynq-ultrascale+" && $i < $num_wgt_mem_uram } {
+#     set_property -dict [list CONFIG.PRIM_type_to_Implement {URAM}] $wgt_mem
+#   }
+# }
+# for {set i 0} {$i < $out_part} {incr i} {
+#   # Create instance: out_mem, and set properties
+#   set out_mem [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 out_mem_${i} ]
+#   [ init_bram_property $out_mem $out_mem_width $out_mem_depth ]
+#   # If module has more than 1 mem port, the naming convention changes
+#   if {$out_part > 1} {
+#     set porta [get_bd_intf_pins compute_0/out_mem_${i}_V_PORTA]
+#     set portb [get_bd_intf_pins store_0/out_mem_${i}_V_PORTA]
+#   } else {
+#     set porta [get_bd_intf_pins compute_0/out_mem_V_PORTA]
+#     set portb [get_bd_intf_pins store_0/out_mem_V_PORTA]
+#   }
+#   # Create interface connections
+#   connect_bd_intf_net -intf_net compute_0_out_mem_${i}_V_PORTA \
+#     [get_bd_intf_pins $out_mem/BRAM_PORTA] \
+#     $porta
+#   connect_bd_intf_net -intf_net store_0_out_mem_${i}_V_PORTA \
+#     [get_bd_intf_pins $out_mem/BRAM_PORTB] \
+#     $portb
+# }
+# if { $device_family eq "zynq-7000" } {
+#   set processing_system [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system ]
+#   set_property -dict [ list \
+#     CONFIG.PCW_EN_CLK0_PORT {1} \
+#     CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100} \
+#     CONFIG.PCW_USE_DEFAULT_ACP_USER_VAL {1} \
+#     CONFIG.PCW_USE_S_AXI_ACP {1} \
+#     CONFIG.preset {ZC702} \
+#   ] $processing_system
+#   # Get ports that are specific to the Zynq 7000 processing system
+#   set ps_clk    [get_bd_pins processing_system/FCLK_CLK0]
+#   set ps_rstn   [get_bd_pins processing_system/FCLK_RESET0_N]
+#   set maxi_clk  [get_bd_pins processing_system/M_AXI_GP0_ACLK]
+#   set saxi_clk  [get_bd_pins processing_system/S_AXI_ACP_ACLK]
+#   set maxi      [get_bd_intf_pins processing_system/M_AXI_GP0]
+#   set saxi      [get_bd_intf_pins processing_system/S_AXI_ACP]
+# } elseif { $device_family eq "zynq-ultrascale+" } {
+#   set processing_system [ create_bd_cell -type ip -vlnv xilinx.com:ip:zynq_ultra_ps_e:3.3 processing_system ]
+#   apply_bd_automation -rule xilinx.com:bd_rule:zynq_ultra_ps_e -config {apply_board_preset "1" }  [get_bd_cells processing_system]
+#   set_property -dict [ list \
+#     CONFIG.PSU__FPGA_PL0_ENABLE {1} \
+#     CONFIG.PSU__CRL_APB__PL0_REF_CTRL__FREQMHZ {100} \
+#     CONFIG.PSU__USE__M_AXI_GP0 {1} \
+#     CONFIG.PSU__USE__M_AXI_GP1 {0} \
+#     CONFIG.PSU__USE__M_AXI_GP2 {0} \
+#     CONFIG.PSU__USE__S_AXI_GP0 {1}
+#   ] $processing_system
+#   # Get ports that are specific to the Zynq Ultrascale MPSoC processing system
+#   set ps_clk    [get_bd_pins processing_system/pl_clk0]
+#   set ps_rstn   [get_bd_pins processing_system/pl_resetn0]
+#   set maxi_clk  [get_bd_pins processing_system/maxihpm0_fpd_aclk]
+#   set saxi_clk  [get_bd_pins processing_system/saxihpc0_fpd_aclk]
+#   set maxi      [get_bd_intf_pins processing_system/M_AXI_HPM0_FPD]
+#   set saxi      [get_bd_intf_pins processing_system/S_AXI_HPC0_FPD]
+# }
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [PS7-6] The applied preset does not match with  board preset. You may not get expected settings for  board. The ZC702 preset is designed for ZC702 board.
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+# connect_bd_intf_net -intf_net axi_xbar_M00_AXI [get_bd_intf_pins axi_xbar/M00_AXI] [get_bd_intf_pins fetch_0/s_axi_CONTROL_BUS]
+# connect_bd_intf_net -intf_net axi_xbar_M01_AXI [get_bd_intf_pins axi_xbar/M01_AXI] [get_bd_intf_pins load_0/s_axi_CONTROL_BUS]
+# connect_bd_intf_net -intf_net axi_xbar_M02_AXI [get_bd_intf_pins axi_xbar/M02_AXI] [get_bd_intf_pins compute_0/s_axi_CONTROL_BUS]
+# connect_bd_intf_net -intf_net axi_xbar_M03_AXI [get_bd_intf_pins axi_xbar/M03_AXI] [get_bd_intf_pins store_0/s_axi_CONTROL_BUS]
+# connect_bd_intf_net -intf_net fetch_0_l2g_dep_queue_V [get_bd_intf_pins l2g_queue/S_AXIS] [get_bd_intf_pins load_0/l2g_dep_queue_V]
+# connect_bd_intf_net -intf_net fetch_0_load_queue_V_V [get_bd_intf_pins fetch_0/load_queue_V_V] [get_bd_intf_pins load_queue/S_AXIS]
+# connect_bd_intf_net -intf_net fetch_0_gemm_queue_V_V [get_bd_intf_pins fetch_0/gemm_queue_V_V] [get_bd_intf_pins gemm_queue/S_AXIS]
+# connect_bd_intf_net -intf_net fetch_0_store_queue_V_V [get_bd_intf_pins fetch_0/store_queue_V_V] [get_bd_intf_pins store_queue/S_AXIS]
+# connect_bd_intf_net -intf_net compute_0_g2l_dep_queue_V [get_bd_intf_pins compute_0/g2l_dep_queue_V] [get_bd_intf_pins g2l_queue/S_AXIS]
+# connect_bd_intf_net -intf_net compute_0_g2s_dep_queue_V [get_bd_intf_pins compute_0/g2s_dep_queue_V] [get_bd_intf_pins g2s_queue/S_AXIS]
+# connect_bd_intf_net -intf_net store_0_s2g_dep_queue_V [get_bd_intf_pins s2g_queue/S_AXIS] [get_bd_intf_pins store_0/s2g_dep_queue_V]
+# connect_bd_intf_net -intf_net load_queue_M_AXIS [get_bd_intf_pins load_0/load_queue_V_V] [get_bd_intf_pins load_queue/M_AXIS]
+# connect_bd_intf_net -intf_net gemm_queue_M_AXIS [get_bd_intf_pins compute_0/gemm_queue_V_V] [get_bd_intf_pins gemm_queue/M_AXIS]
+# connect_bd_intf_net -intf_net store_queue_M_AXIS [get_bd_intf_pins store_0/store_queue_V_V] [get_bd_intf_pins store_queue/M_AXIS]
+# connect_bd_intf_net -intf_net l2g_queue_M_AXIS [get_bd_intf_pins compute_0/l2g_dep_queue_V] [get_bd_intf_pins l2g_queue/M_AXIS]
+# connect_bd_intf_net -intf_net g2l_queue_M_AXIS [get_bd_intf_pins g2l_queue/M_AXIS] [get_bd_intf_pins load_0/g2l_dep_queue_V]
+# connect_bd_intf_net -intf_net g2s_queue_M_AXIS [get_bd_intf_pins g2s_queue/M_AXIS] [get_bd_intf_pins store_0/g2s_dep_queue_V]
+# connect_bd_intf_net -intf_net s2g_queue_M_AXIS [get_bd_intf_pins compute_0/s2g_dep_queue_V] [get_bd_intf_pins s2g_queue/M_AXIS]
+# connect_bd_intf_net -intf_net fetch_0_m_axi_ins_port [get_bd_intf_pins axi_smc0/S00_AXI] [get_bd_intf_pins fetch_0/m_axi_ins_port]
+# connect_bd_intf_net -intf_net load_0_m_axi_data_port [get_bd_intf_pins axi_smc0/S01_AXI] [get_bd_intf_pins load_0/m_axi_data_port]
+# connect_bd_intf_net -intf_net compute_0_m_axi_uop_port [get_bd_intf_pins axi_smc0/S02_AXI] [get_bd_intf_pins compute_0/m_axi_uop_port]
+# connect_bd_intf_net -intf_net compute_0_m_axi_data_port [get_bd_intf_pins axi_smc0/S03_AXI] [get_bd_intf_pins compute_0/m_axi_data_port]
+# connect_bd_intf_net -intf_net store_0_m_axi_data_port [get_bd_intf_pins axi_smc0/S04_AXI] [get_bd_intf_pins store_0/m_axi_data_port]
+# connect_bd_intf_net -intf_net axi_smc0_M00_AXI [get_bd_intf_pins axi_smc0/M00_AXI] $saxi
+# connect_bd_intf_net -intf_net processing_system_m_axi [get_bd_intf_pins axi_xbar/S00_AXI] $maxi
+# connect_bd_net -net processing_system_reset \
+#   [get_bd_pins pll_clk/resetn] \
+#   [get_bd_pins proc_sys_reset/ext_reset_in] \
+#   $ps_rstn
+# connect_bd_net -net ps_clk_net \
+#   [get_bd_pins pll_clk/clk_in1] \
+#   $ps_clk
+# connect_bd_net -net proc_sys_reset_interconnect_aresetn \
+#   [get_bd_pins axi_xbar/ARESETN] \
+#   [get_bd_pins proc_sys_reset/interconnect_aresetn]
+# connect_bd_net -net proc_sys_reset_peripheral_aresetn \
+#   [get_bd_pins proc_sys_reset/peripheral_aresetn] \
+#   [get_bd_pins axi_smc0/aresetn] \
+#   [get_bd_pins axi_xbar/M00_ARESETN] \
+#   [get_bd_pins axi_xbar/M01_ARESETN] \
+#   [get_bd_pins axi_xbar/M02_ARESETN] \
+#   [get_bd_pins axi_xbar/M03_ARESETN] \
+#   [get_bd_pins axi_xbar/S00_ARESETN] \
+#   [get_bd_pins fetch_0/ap_rst_n] \
+#   [get_bd_pins load_0/ap_rst_n] \
+#   [get_bd_pins store_0/ap_rst_n] \
+#   [get_bd_pins compute_0/ap_rst_n] \
+#   [get_bd_pins load_queue/s_aresetn] \
+#   [get_bd_pins gemm_queue/s_aresetn] \
+#   [get_bd_pins store_queue/s_aresetn] \
+#   [get_bd_pins l2g_queue/s_aresetn] \
+#   [get_bd_pins g2l_queue/s_aresetn] \
+#   [get_bd_pins g2s_queue/s_aresetn] \
+#   [get_bd_pins s2g_queue/s_aresetn]
+# connect_bd_net -net processing_system_clk \
+#   [get_bd_pins pll_clk/clk_out1] \
+#   [get_bd_pins proc_sys_reset/slowest_sync_clk] \
+#   [get_bd_pins axi_smc0/aclk] \
+#   [get_bd_pins axi_xbar/ACLK] \
+#   [get_bd_pins axi_xbar/M00_ACLK] \
+#   [get_bd_pins axi_xbar/M01_ACLK] \
+#   [get_bd_pins axi_xbar/M02_ACLK] \
+#   [get_bd_pins axi_xbar/M03_ACLK] \
+#   [get_bd_pins axi_xbar/S00_ACLK] \
+#   [get_bd_pins fetch_0/ap_clk] \
+#   [get_bd_pins load_0/ap_clk] \
+#   [get_bd_pins compute_0/ap_clk] \
+#   [get_bd_pins store_0/ap_clk] \
+#   [get_bd_pins load_queue/s_aclk] \
+#   [get_bd_pins gemm_queue/s_aclk] \
+#   [get_bd_pins store_queue/s_aclk] \
+#   [get_bd_pins l2g_queue/s_aclk] \
+#   [get_bd_pins g2l_queue/s_aclk] \
+#   [get_bd_pins g2s_queue/s_aclk] \
+#   [get_bd_pins s2g_queue/s_aclk] \
+#   $maxi_clk \
+#   $saxi_clk
+# create_bd_addr_seg -range $ip_reg_map_range -offset $fetch_base_addr [get_bd_addr_spaces processing_system/Data] [get_bd_addr_segs fetch_0/s_axi_CONTROL_BUS/Reg] SEG_fetch_0_Reg
+# create_bd_addr_seg -range $ip_reg_map_range -offset $load_base_addr [get_bd_addr_spaces processing_system/Data] [get_bd_addr_segs load_0/s_axi_CONTROL_BUS/Reg] SEG_load_0_Reg
+# create_bd_addr_seg -range $ip_reg_map_range -offset $compute_base_addr [get_bd_addr_spaces processing_system/Data] [get_bd_addr_segs compute_0/s_axi_CONTROL_BUS/Reg] SEG_compute_0_Reg
+# create_bd_addr_seg -range $ip_reg_map_range -offset $store_base_addr [get_bd_addr_spaces processing_system/Data] [get_bd_addr_segs store_0/s_axi_CONTROL_BUS/Reg] SEG_store_0_Reg
+# if { $device_family eq "zynq-7000" } {
+#   create_bd_addr_seg -range 0x40000000 -offset 0x00000000 [get_bd_addr_spaces compute_0/Data_m_axi_uop_port] [get_bd_addr_segs processing_system/S_AXI_ACP/ACP_DDR_LOWOCM] SEG_processing_system_ACP_DDR_LOWOCM
+#   create_bd_addr_seg -range 0x40000000 -offset 0x00000000 [get_bd_addr_spaces compute_0/Data_m_axi_data_port] [get_bd_addr_segs processing_system/S_AXI_ACP/ACP_DDR_LOWOCM] SEG_processing_system_ACP_DDR_LOWOCM
+#   create_bd_addr_seg -range 0x40000000 -offset 0x00000000 [get_bd_addr_spaces fetch_0/Data_m_axi_ins_port] [get_bd_addr_segs processing_system/S_AXI_ACP/ACP_DDR_LOWOCM] SEG_processing_system_ACP_DDR_LOWOCM
+#   create_bd_addr_seg -range 0x40000000 -offset 0x00000000 [get_bd_addr_spaces load_0/Data_m_axi_data_port] [get_bd_addr_segs processing_system/S_AXI_ACP/ACP_DDR_LOWOCM] SEG_processing_system_ACP_DDR_LOWOCM
+#   create_bd_addr_seg -range 0x40000000 -offset 0x00000000 [get_bd_addr_spaces store_0/Data_m_axi_data_port] [get_bd_addr_segs processing_system/S_AXI_ACP/ACP_DDR_LOWOCM] SEG_processing_system_ACP_DDR_LOWOCM
+# } elseif { $device_family eq "zynq-ultrascale+"} {
+#   create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces fetch_0/Data_m_axi_ins_port] [get_bd_addr_segs processing_system/SAXIGP0/HPC0_DDR_LOW] SEG_processing_system_HPC0_DDR_LOW
+#   create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces load_0/Data_m_axi_data_port] [get_bd_addr_segs processing_system/SAXIGP0/HPC0_DDR_LOW] SEG_processing_system_HPC0_DDR_LOW
+#   create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces compute_0/Data_m_axi_uop_port] [get_bd_addr_segs processing_system/SAXIGP0/HPC0_DDR_LOW] SEG_processing_system_HPC0_DDR_LOW
+#   create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces compute_0/Data_m_axi_data_port] [get_bd_addr_segs processing_system/SAXIGP0/HPC0_DDR_LOW] SEG_processing_system_HPC0_DDR_LOW
+#   create_bd_addr_seg -range 0x80000000 -offset 0x00000000 [get_bd_addr_spaces store_0/Data_m_axi_data_port] [get_bd_addr_segs processing_system/SAXIGP0/HPC0_DDR_LOW] SEG_processing_system_HPC0_DDR_LOW
+# }
+# save_bd_design
+Wrote  : </mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/vta.bd> 
+save_bd_design: Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:06 . Memory (MB): peak = 2067.453 ; gain = 0.000 ; free physical = 6119 ; free virtual = 8726
+# make_wrapper -files \
+#   [get_files $proj_path/$proj_name.srcs/sources_1/bd/$proj_name/$proj_name.bd] -top
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+xit::source_ipfile: Time (s): cpu = 00:00:02 ; elapsed = 00:00:32 . Memory (MB): peak = 2067.453 ; gain = 0.000 ; free physical = 6017 ; free virtual = 8624
+WARNING: [BD 41-2180] Resetting the memory initialization file of </inp_mem_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </wgt_mem_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </wgt_mem_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </out_mem_0> to default.
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /pll_clk clk_wiz propagate
+INFO: [xilinx.com:ip:clk_wiz:6.0-1] /pll_clk clk_wiz propagate
+WARNING: [BD 41-237] Bus Interface property AWUSER_WIDTH does not match between /processing_system/S_AXI_ACP(5) and /axi_smc0/M00_AXI(0)
+WARNING: [BD 41-237] Bus Interface property ARUSER_WIDTH does not match between /processing_system/S_AXI_ACP(5) and /axi_smc0/M00_AXI(0)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MASTER_TYPE does not match between /inp_mem_0/BRAM_PORTA(OTHER) and /load_0/inp_mem_V_PORTA(BRAM_CTRL)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MASTER_TYPE does not match between /wgt_mem_0/BRAM_PORTA(OTHER) and /load_0/wgt_mem_0_V_PORTA(BRAM_CTRL)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MASTER_TYPE does not match between /wgt_mem_1/BRAM_PORTA(OTHER) and /load_0/wgt_mem_1_V_PORTA(BRAM_CTRL)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MASTER_TYPE does not match between /inp_mem_0/BRAM_PORTB(OTHER) and /compute_0/inp_mem_V_PORTA(BRAM_CTRL)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MASTER_TYPE does not match between /wgt_mem_0/BRAM_PORTB(OTHER) and /compute_0/wgt_mem_0_V_PORTA(BRAM_CTRL)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MASTER_TYPE does not match between /wgt_mem_1/BRAM_PORTB(OTHER) and /compute_0/wgt_mem_1_V_PORTA(BRAM_CTRL)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MASTER_TYPE does not match between /out_mem_0/BRAM_PORTA(OTHER) and /compute_0/out_mem_V_PORTA(BRAM_CTRL)
+CRITICAL WARNING: [BD 41-237] Bus Interface property MASTER_TYPE does not match between /out_mem_0/BRAM_PORTB(OTHER) and /store_0/out_mem_V_PORTA(BRAM_CTRL)
+Wrote  : </mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/vta.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S00_AXI_arlock'(1) to pin: '/fetch_0/m_axi_ins_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S00_AXI_awlock'(1) to pin: '/fetch_0/m_axi_ins_port_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S01_AXI_arlock'(1) to pin: '/load_0/m_axi_data_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S01_AXI_awlock'(1) to pin: '/load_0/m_axi_data_port_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S02_AXI_arlock'(1) to pin: '/compute_0/m_axi_uop_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S02_AXI_awlock'(1) to pin: '/compute_0/m_axi_uop_port_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S03_AXI_arlock'(1) to pin: '/compute_0/m_axi_data_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S03_AXI_awlock'(1) to pin: '/compute_0/m_axi_data_port_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S04_AXI_arlock'(1) to pin: '/store_0/m_axi_data_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S04_AXI_awlock'(1) to pin: '/store_0/m_axi_data_port_AWLOCK'(2) - Only lower order bits will be connected.
+VHDL Output written to : /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S00_AXI_arlock'(1) to pin: '/fetch_0/m_axi_ins_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S00_AXI_awlock'(1) to pin: '/fetch_0/m_axi_ins_port_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S01_AXI_arlock'(1) to pin: '/load_0/m_axi_data_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S01_AXI_awlock'(1) to pin: '/load_0/m_axi_data_port_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S02_AXI_arlock'(1) to pin: '/compute_0/m_axi_uop_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S02_AXI_awlock'(1) to pin: '/compute_0/m_axi_uop_port_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S03_AXI_arlock'(1) to pin: '/compute_0/m_axi_data_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S03_AXI_awlock'(1) to pin: '/compute_0/m_axi_data_port_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S04_AXI_arlock'(1) to pin: '/store_0/m_axi_data_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S04_AXI_awlock'(1) to pin: '/store_0/m_axi_data_port_AWLOCK'(2) - Only lower order bits will be connected.
+VHDL Output written to : /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/sim/vta.v
+VHDL Output written to : /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/hdl/vta_wrapper.v
+make_wrapper: Time (s): cpu = 00:00:10 ; elapsed = 00:01:19 . Memory (MB): peak = 2067.453 ; gain = 0.000 ; free physical = 5873 ; free virtual = 8481
+# add_files -norecurse $proj_path/$proj_name.srcs/sources_1/bd/$proj_name/hdl/${proj_name}_wrapper.v
+# update_compile_order -fileset sources_1
+# update_compile_order -fileset sim_1
+# set num_threads 8
+# launch_runs impl_1 -to_step write_bitstream -jobs $num_threads
+INFO: [BD 41-1662] The design 'vta.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </inp_mem_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </wgt_mem_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </wgt_mem_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </out_mem_0> to default.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S00_AXI_arlock'(1) to pin: '/fetch_0/m_axi_ins_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S00_AXI_awlock'(1) to pin: '/fetch_0/m_axi_ins_port_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S01_AXI_arlock'(1) to pin: '/load_0/m_axi_data_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S01_AXI_awlock'(1) to pin: '/load_0/m_axi_data_port_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S02_AXI_arlock'(1) to pin: '/compute_0/m_axi_uop_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S02_AXI_awlock'(1) to pin: '/compute_0/m_axi_uop_port_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S03_AXI_arlock'(1) to pin: '/compute_0/m_axi_data_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S03_AXI_awlock'(1) to pin: '/compute_0/m_axi_data_port_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S04_AXI_arlock'(1) to pin: '/store_0/m_axi_data_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S04_AXI_awlock'(1) to pin: '/store_0/m_axi_data_port_AWLOCK'(2) - Only lower order bits will be connected.
+VHDL Output written to : /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S00_AXI_arlock'(1) to pin: '/fetch_0/m_axi_ins_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S00_AXI_awlock'(1) to pin: '/fetch_0/m_axi_ins_port_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S01_AXI_arlock'(1) to pin: '/load_0/m_axi_data_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S01_AXI_awlock'(1) to pin: '/load_0/m_axi_data_port_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S02_AXI_arlock'(1) to pin: '/compute_0/m_axi_uop_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S02_AXI_awlock'(1) to pin: '/compute_0/m_axi_uop_port_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S03_AXI_arlock'(1) to pin: '/compute_0/m_axi_data_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S03_AXI_awlock'(1) to pin: '/compute_0/m_axi_data_port_AWLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S04_AXI_arlock'(1) to pin: '/store_0/m_axi_data_port_ARLOCK'(2) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_smc0/S04_AXI_awlock'(1) to pin: '/store_0/m_axi_data_port_AWLOCK'(2) - Only lower order bits will be connected.
+VHDL Output written to : /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/sim/vta.v
+VHDL Output written to : /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/hdl/vta_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block proc_sys_reset .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pll_clk .
+Exporting to file /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_axi_smc0_0/bd_0/hw_handoff/vta_axi_smc0_0.hwh
+Generated Block Design Tcl file /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_axi_smc0_0/bd_0/hw_handoff/vta_axi_smc0_0_bd.tcl
+Generated Hardware Definition File /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_axi_smc0_0/bd_0/synth/vta_axi_smc0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xbar/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fetch_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block load_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block compute_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block store_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block load_queue .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gemm_queue .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block store_queue .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block l2g_queue .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block g2l_queue .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block g2s_queue .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block s2g_queue .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block inp_mem_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block wgt_mem_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block wgt_mem_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block out_mem_0 .
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_ACP'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_auto_pc_0/vta_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_xbar/s00_couplers/auto_pc .
+Exporting to file /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/hw_handoff/vta.hwh
+Generated Block Design Tcl file /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/hw_handoff/vta_bd.tcl
+Generated Hardware Definition File /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.hwdef
+[Thu Jun 20 11:05:55 2024] Launched vta_load_queue_0_synth_1, vta_compute_0_0_synth_1, vta_store_0_0_synth_1, vta_load_0_0_synth_1, vta_wgt_mem_1_0_synth_1, vta_pll_clk_0_synth_1, vta_out_mem_0_0_synth_1, vta_axi_smc0_0_synth_1, vta_processing_system_0_synth_1, vta_proc_sys_reset_0_synth_1, vta_fetch_0_0_synth_1, vta_s2g_queue_0_synth_1, vta_g2l_queue_0_synth_1, vta_wgt_mem_0_0_synth_1, vta_inp_mem_0_0_synth_1, vta_l2g_queue_0_synth_1, vta_xbar_0_synth_1, vta_g2s_queue_0_synth_1, vta_store_queue_0_synth_1, vta_gemm_queue_0_synth_1, vta_auto_pc_0_synth_1, synth_1...
+Run output will be captured here:
+vta_load_queue_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_load_queue_0_synth_1/runme.log
+vta_compute_0_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_compute_0_0_synth_1/runme.log
+vta_store_0_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_store_0_0_synth_1/runme.log
+vta_load_0_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_load_0_0_synth_1/runme.log
+vta_wgt_mem_1_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_wgt_mem_1_0_synth_1/runme.log
+vta_pll_clk_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_pll_clk_0_synth_1/runme.log
+vta_out_mem_0_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_out_mem_0_0_synth_1/runme.log
+vta_axi_smc0_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_axi_smc0_0_synth_1/runme.log
+vta_processing_system_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_processing_system_0_synth_1/runme.log
+vta_proc_sys_reset_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_proc_sys_reset_0_synth_1/runme.log
+vta_fetch_0_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_fetch_0_0_synth_1/runme.log
+vta_s2g_queue_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_s2g_queue_0_synth_1/runme.log
+vta_g2l_queue_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_g2l_queue_0_synth_1/runme.log
+vta_wgt_mem_0_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_wgt_mem_0_0_synth_1/runme.log
+vta_inp_mem_0_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_inp_mem_0_0_synth_1/runme.log
+vta_l2g_queue_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_l2g_queue_0_synth_1/runme.log
+vta_xbar_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_xbar_0_synth_1/runme.log
+vta_g2s_queue_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_g2s_queue_0_synth_1/runme.log
+vta_store_queue_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_store_queue_0_synth_1/runme.log
+vta_gemm_queue_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_gemm_queue_0_synth_1/runme.log
+vta_auto_pc_0_synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_auto_pc_0_synth_1/runme.log
+synth_1: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/runme.log
+[Thu Jun 20 11:05:55 2024] Launched impl_1...
+Run output will be captured here: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:31 ; elapsed = 00:02:56 . Memory (MB): peak = 2491.641 ; gain = 224.090 ; free physical = 5828 ; free virtual = 8441
+# wait_on_run impl_1
+[Thu Jun 20 11:05:55 2024] Waiting for impl_1 to finish...
+[Thu Jun 20 11:13:52 2024] impl_1 finished
+WARNING: [Vivado 12-8222] Failed run(s) : 'vta_compute_0_0_synth_1', 'vta_wgt_mem_1_0_synth_1', 'vta_axi_smc0_0_synth_1', 'vta_fetch_0_0_synth_1'
+wait_on_run: Time (s): cpu = 00:00:07 ; elapsed = 00:07:59 . Memory (MB): peak = 2491.641 ; gain = 0.000 ; free physical = 4475 ; free virtual = 6367
+# if {[file exist $proj_path/$proj_name.runs/impl_1/${proj_name}_wrapper.bit]} {
+#   file mkdir $proj_path/export
+#   file copy -force $proj_path/$proj_name.runs/impl_1/${proj_name}_wrapper.bit \
+#     $proj_path/export/vta.bit
+# }
+# exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 20 11:13:56 2024...

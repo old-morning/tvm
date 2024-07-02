@@ -1,0 +1,281 @@
+
+
+================================================================
+== Vivado HLS Report for 'store'
+================================================================
+* Date:           Thu Jun 20 10:58:29 2024
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        vta_store
+* Solution:       soln
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 7.00 ns | 6.125 ns |   0.88 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------------------------+---------+---------+------------+-----------+-----------+------------+----------+
+        |                                     |  Latency (cycles) |  Iteration |  Initiation Interval  |    Trip    |          |
+        |              Loop Name              |   min   |   max   |   Latency  |  achieved |   target  |    Count   | Pipelined|
+        +-------------------------------------+---------+---------+------------+-----------+-----------+------------+----------+
+        |- Loop 1                             |        ?|        ?| 8 ~ 131082 |          -|          -|           ?|    no    |
+        | + memcpy.outputs.V.out_mem.V.addr1  |        0|   131074|           5|          1|          1| 0 ~ 131071 |    yes   |
+        +-------------------------------------+---------+---------+------------+-----------+-----------+------------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|   1405|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        4|      -|     640|    870|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    158|    -|
+|Register         |        0|      -|     841|     32|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        4|      0|    1481|   2465|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        1|      0|       1|      4|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------+-------------------------+---------+-------+-----+-----+-----+
+    |          Instance         |          Module         | BRAM_18K| DSP48E|  FF | LUT | URAM|
+    +---------------------------+-------------------------+---------+-------+-----+-----+-----+
+    |store_CONTROL_BUS_s_axi_U  |store_CONTROL_BUS_s_axi  |        0|      0|   74|  104|    0|
+    |store_data_port_m_axi_U    |store_data_port_m_axi    |        4|      0|  566|  766|    0|
+    +---------------------------+-------------------------+---------+-------+-----+-----+-----+
+    |Total                      |                         |        4|      0|  640|  870|    0|
+    +---------------------------+-------------------------+---------+-------+-----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+-------+---+-----+------------+------------+
+    |          Variable Name         | Operation| DSP48E| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+-------+---+-----+------------+------------+
+    |add_ln304_fu_559_p2             |     +    |      0|  0|   39|          32|          32|
+    |add_ln551_fu_375_p2             |     +    |      0|  0|   41|          34|          34|
+    |add_ln552_1_fu_424_p2           |     +    |      0|  0|   19|          14|          14|
+    |add_ln552_fu_414_p2             |     +    |      0|  0|   24|          17|           1|
+    |sram_idx_V_1_fu_554_p2          |     +    |      0|  0|   23|          16|          16|
+    |y_fu_357_p2                     |     +    |      0|  0|   23|          16|           1|
+    |sub_ln552_1_fu_494_p2           |     -    |      0|  0|   15|           8|           8|
+    |sub_ln552_2_fu_520_p2           |     -    |      0|  0|   15|           7|           8|
+    |sub_ln552_fu_482_p2             |     -    |      0|  0|   15|           8|           8|
+    |and_ln552_fu_545_p2             |    and   |      0|  0|  128|         128|         128|
+    |ap_block_pp0_stage0_11001       |    and   |      0|  0|    2|           1|           1|
+    |ap_block_state14_io             |    and   |      0|  0|    2|           1|           1|
+    |ap_block_state2_io              |    and   |      0|  0|    2|           1|           1|
+    |ap_block_state8_io              |    and   |      0|  0|    2|           1|           1|
+    |ap_predicate_op57_write_state2  |    and   |      0|  0|    2|           1|           1|
+    |icmp_ln547_fu_352_p2            |   icmp   |      0|  0|   13|          16|          16|
+    |icmp_ln552_1_fu_461_p2          |   icmp   |      0|  0|   11|           7|           7|
+    |icmp_ln552_fu_409_p2            |   icmp   |      0|  0|   18|          17|          17|
+    |lshr_ln552_2_fu_539_p2          |   lshr   |      0|  0|  423|           2|         128|
+    |lshr_ln552_fu_530_p2            |   lshr   |      0|  0|  423|         128|         128|
+    |ap_block_state1                 |    or    |      0|  0|    2|           1|           1|
+    |empty_10_fu_455_p2              |    or    |      0|  0|    7|           7|           6|
+    |select_ln552_1_fu_507_p3        |  select  |      0|  0|  128|           1|         128|
+    |select_ln552_2_fu_513_p3        |  select  |      0|  0|    8|           1|           8|
+    |select_ln552_fu_500_p3          |  select  |      0|  0|    8|           1|           8|
+    |ap_enable_pp0                   |    xor   |      0|  0|    2|           1|           2|
+    |ap_enable_reg_pp0_iter1         |    xor   |      0|  0|    2|           2|           1|
+    |xor_ln552_fu_488_p2             |    xor   |      0|  0|    8|           8|           7|
+    +--------------------------------+----------+-------+---+-----+------------+------------+
+    |Total                           |          |      0|  0| 1405|         477|         712|
+    +--------------------------------+----------+-------+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                    |  50|         11|    1|         11|
+    |ap_enable_reg_pp0_iter1      |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter4      |   9|          2|    1|          2|
+    |data_port_blk_n_AW           |   9|          2|    1|          2|
+    |data_port_blk_n_B            |   9|          2|    1|          2|
+    |data_port_blk_n_W            |   9|          2|    1|          2|
+    |dram_idx_V_reg_232           |   9|          2|   32|         64|
+    |g2s_dep_queue_V_TDATA_blk_n  |   9|          2|    1|          2|
+    |phi_ln552_reg_253            |   9|          2|   17|         34|
+    |s2g_dep_queue_V_TDATA_blk_n  |   9|          2|    1|          2|
+    |sram_idx_V_0_reg_222         |   9|          2|   16|         32|
+    |store_queue_V_V_TDATA_blk_n  |   9|          2|    1|          2|
+    |y_0_reg_242                  |   9|          2|   16|         32|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        | 158|         35|   90|        189|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+-----+----+-----+-----------+
+    |           Name          |  FF | LUT| Bits| Const Bits|
+    +-------------------------+-----+----+-----+-----------+
+    |add_ln304_reg_702        |   32|   0|   32|          0|
+    |add_ln551_reg_620        |   34|   0|   34|          0|
+    |and_ln_reg_602           |   16|   0|   17|          1|
+    |ap_CS_fsm                |   10|   0|   10|          0|
+    |ap_enable_reg_pp0_iter0  |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2  |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3  |    1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4  |    1|   0|    1|          0|
+    |dram_idx_V_reg_232       |   32|   0|   32|          0|
+    |empty_10_reg_670         |    1|   0|    7|          6|
+    |empty_9_reg_654          |    1|   0|    1|          0|
+    |icmp_ln552_1_reg_675     |    1|   0|    1|          0|
+    |icmp_ln552_reg_640       |    1|   0|    1|          0|
+    |lshr_ln552_reg_687       |  128|   0|  128|          0|
+    |out_mem_V_load_reg_659   |  128|   0|  128|          0|
+    |p_cast4_reg_564          |   29|   0|   34|          5|
+    |phi_ln552_reg_253        |   17|   0|   17|          0|
+    |shl_ln_reg_635           |   13|   0|   14|          1|
+    |sram_idx_V_0_reg_222     |   16|   0|   16|          0|
+    |sram_idx_V_1_reg_697     |   16|   0|   16|          0|
+    |sub_ln552_2_reg_682      |    7|   0|    8|          1|
+    |tmp_6_reg_625            |    1|   0|    1|          0|
+    |tmp_8_reg_665            |    1|   0|    7|          6|
+    |tmp_V_reg_569            |  128|   0|  128|          0|
+    |tmp_reg_587              |   16|   0|   16|          0|
+    |trunc_ln2_reg_592        |   16|   0|   16|          0|
+    |trunc_ln552_2_reg_692    |   64|   0|   64|          0|
+    |y_0_reg_242              |   16|   0|   16|          0|
+    |y_reg_615                |   16|   0|   16|          0|
+    |zext_ln304_reg_597       |   16|   0|   32|         16|
+    |zext_ln552_reg_607       |   16|   0|   32|         16|
+    |icmp_ln552_reg_640       |   64|  32|    1|          0|
+    +-------------------------+-----+----+-----+-----------+
+    |Total                    |  841|  32|  830|         52|
+    +-------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+-----------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++---------------------------+-----+-----+------------+-----------------+--------------+
+|s_axi_CONTROL_BUS_AWVALID  |  in |    1|    s_axi   |   CONTROL_BUS   |    scalar    |
+|s_axi_CONTROL_BUS_AWREADY  | out |    1|    s_axi   |   CONTROL_BUS   |    scalar    |
+|s_axi_CONTROL_BUS_AWADDR   |  in |    5|    s_axi   |   CONTROL_BUS   |    scalar    |
+|s_axi_CONTROL_BUS_WVALID   |  in |    1|    s_axi   |   CONTROL_BUS   |    scalar    |
+|s_axi_CONTROL_BUS_WREADY   | out |    1|    s_axi   |   CONTROL_BUS   |    scalar    |
+|s_axi_CONTROL_BUS_WDATA    |  in |   32|    s_axi   |   CONTROL_BUS   |    scalar    |
+|s_axi_CONTROL_BUS_WSTRB    |  in |    4|    s_axi   |   CONTROL_BUS   |    scalar    |
+|s_axi_CONTROL_BUS_ARVALID  |  in |    1|    s_axi   |   CONTROL_BUS   |    scalar    |
+|s_axi_CONTROL_BUS_ARREADY  | out |    1|    s_axi   |   CONTROL_BUS   |    scalar    |
+|s_axi_CONTROL_BUS_ARADDR   |  in |    5|    s_axi   |   CONTROL_BUS   |    scalar    |
+|s_axi_CONTROL_BUS_RVALID   | out |    1|    s_axi   |   CONTROL_BUS   |    scalar    |
+|s_axi_CONTROL_BUS_RREADY   |  in |    1|    s_axi   |   CONTROL_BUS   |    scalar    |
+|s_axi_CONTROL_BUS_RDATA    | out |   32|    s_axi   |   CONTROL_BUS   |    scalar    |
+|s_axi_CONTROL_BUS_RRESP    | out |    2|    s_axi   |   CONTROL_BUS   |    scalar    |
+|s_axi_CONTROL_BUS_BVALID   | out |    1|    s_axi   |   CONTROL_BUS   |    scalar    |
+|s_axi_CONTROL_BUS_BREADY   |  in |    1|    s_axi   |   CONTROL_BUS   |    scalar    |
+|s_axi_CONTROL_BUS_BRESP    | out |    2|    s_axi   |   CONTROL_BUS   |    scalar    |
+|ap_clk                     |  in |    1| ap_ctrl_hs |      store      | return value |
+|ap_rst_n                   |  in |    1| ap_ctrl_hs |      store      | return value |
+|interrupt                  | out |    1| ap_ctrl_hs |      store      | return value |
+|m_axi_data_port_AWVALID    | out |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_AWREADY    |  in |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_AWADDR     | out |   32|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_AWID       | out |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_AWLEN      | out |    8|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_AWSIZE     | out |    3|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_AWBURST    | out |    2|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_AWLOCK     | out |    2|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_AWCACHE    | out |    4|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_AWPROT     | out |    3|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_AWQOS      | out |    4|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_AWREGION   | out |    4|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_AWUSER     | out |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_WVALID     | out |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_WREADY     |  in |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_WDATA      | out |   64|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_WSTRB      | out |    8|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_WLAST      | out |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_WID        | out |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_WUSER      | out |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_ARVALID    | out |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_ARREADY    |  in |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_ARADDR     | out |   32|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_ARID       | out |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_ARLEN      | out |    8|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_ARSIZE     | out |    3|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_ARBURST    | out |    2|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_ARLOCK     | out |    2|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_ARCACHE    | out |    4|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_ARPROT     | out |    3|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_ARQOS      | out |    4|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_ARREGION   | out |    4|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_ARUSER     | out |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_RVALID     |  in |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_RREADY     | out |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_RDATA      |  in |   64|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_RLAST      |  in |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_RID        |  in |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_RUSER      |  in |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_RRESP      |  in |    2|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_BVALID     |  in |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_BREADY     | out |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_BRESP      |  in |    2|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_BID        |  in |    1|    m_axi   |    data_port    |    pointer   |
+|m_axi_data_port_BUSER      |  in |    1|    m_axi   |    data_port    |    pointer   |
+|store_queue_V_V_TDATA      |  in |  128|    axis    | store_queue_V_V |    pointer   |
+|store_queue_V_V_TVALID     |  in |    1|    axis    | store_queue_V_V |    pointer   |
+|store_queue_V_V_TREADY     | out |    1|    axis    | store_queue_V_V |    pointer   |
+|g2s_dep_queue_V_TDATA      |  in |    8|    axis    | g2s_dep_queue_V |    pointer   |
+|g2s_dep_queue_V_TVALID     |  in |    1|    axis    | g2s_dep_queue_V |    pointer   |
+|g2s_dep_queue_V_TREADY     | out |    1|    axis    | g2s_dep_queue_V |    pointer   |
+|s2g_dep_queue_V_TDATA      | out |    8|    axis    | s2g_dep_queue_V |    pointer   |
+|s2g_dep_queue_V_TVALID     | out |    1|    axis    | s2g_dep_queue_V |    pointer   |
+|s2g_dep_queue_V_TREADY     |  in |    1|    axis    | s2g_dep_queue_V |    pointer   |
+|out_mem_V_Addr_A           | out |   32|    bram    |    out_mem_V    |     array    |
+|out_mem_V_EN_A             | out |    1|    bram    |    out_mem_V    |     array    |
+|out_mem_V_WEN_A            | out |   16|    bram    |    out_mem_V    |     array    |
+|out_mem_V_Din_A            | out |  128|    bram    |    out_mem_V    |     array    |
+|out_mem_V_Dout_A           |  in |  128|    bram    |    out_mem_V    |     array    |
+|out_mem_V_Clk_A            | out |    1|    bram    |    out_mem_V    |     array    |
+|out_mem_V_Rst_A            | out |    1|    bram    |    out_mem_V    |     array    |
++---------------------------+-----+-----+------------+-----------------+--------------+
+

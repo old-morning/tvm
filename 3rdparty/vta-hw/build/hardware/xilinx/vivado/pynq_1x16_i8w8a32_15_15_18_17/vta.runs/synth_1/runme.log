@@ -1,0 +1,469 @@
+
+*** Running vivado
+    with args -log vta_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source vta_wrapper.tcl
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source vta_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/mnt/e/_AI/tools/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:compute:1.0'. The one found in IP location '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib/xilinx_com_hls_compute_1_0' will take precedence over the same IP in location /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib/xilinx_com_hls_compute_1_0_1
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:fetch:1.0'. The one found in IP location '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib/xilinx_com_hls_fetch_1_0' will take precedence over the same IP in location /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib/xilinx_com_hls_fetch_1_0_1
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:load:1.0'. The one found in IP location '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib/xilinx_com_hls_load_1_0' will take precedence over the same IP in location /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib/xilinx_com_hls_load_1_0_1
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:store:1.0'. The one found in IP location '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib/xilinx_com_hls_store_1_0' will take precedence over the same IP in location /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib/xilinx_com_hls_store_1_0_1
+update_ip_catalog: Time (s): cpu = 00:00:00.60 ; elapsed = 00:00:07 . Memory (MB): peak = 2073.879 ; gain = 0.000 ; free physical = 6330 ; free virtual = 8265
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:33 . Memory (MB): peak = 2073.879 ; gain = 0.000 ; free physical = 6271 ; free virtual = 8206
+Command: synth_design -top vta_wrapper -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20139
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2073.922 ; gain = 0.000 ; free physical = 5278 ; free virtual = 7213
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'vta_wrapper' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/hdl/vta_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'vta' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:846]
+INFO: [Synth 8-6157] synthesizing module 'vta_axi_smc0_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_axi_smc0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_axi_smc0_0' (1#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_axi_smc0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vta_axi_xbar_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2146]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1XVTANC' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1XVTANC' (2#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:12]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_AMIEGD' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:144]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_AMIEGD' (3#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:144]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_175ALB7' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:276]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_175ALB7' (4#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:276]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_JG54O6' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:408]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_JG54O6' (5#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:408]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_MZ1B0Y' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:540]
+INFO: [Synth 8-6157] synthesizing module 'vta_auto_pc_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_auto_pc_0' (6#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_MZ1B0Y' (7#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:540]
+INFO: [Synth 8-6157] synthesizing module 'vta_xbar_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_xbar_0' (8#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_xbar_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'vta_xbar_0' is unconnected for instance 'xbar' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2926]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'vta_xbar_0' is unconnected for instance 'xbar' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2926]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'vta_xbar_0' has 40 connections declared, but only 38 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2926]
+INFO: [Synth 8-6155] done synthesizing module 'vta_axi_xbar_0' (9#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2146]
+INFO: [Synth 8-6157] synthesizing module 'vta_compute_0_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_compute_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_compute_0_0' (10#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_compute_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'vta_compute_0_0' is unconnected for instance 'compute_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1577]
+WARNING: [Synth 8-7071] port 'm_axi_uop_port_AWREGION' of module 'vta_compute_0_0' is unconnected for instance 'compute_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1577]
+WARNING: [Synth 8-7071] port 'm_axi_uop_port_ARREGION' of module 'vta_compute_0_0' is unconnected for instance 'compute_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1577]
+WARNING: [Synth 8-7071] port 'm_axi_data_port_AWREGION' of module 'vta_compute_0_0' is unconnected for instance 'compute_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1577]
+WARNING: [Synth 8-7071] port 'm_axi_data_port_ARREGION' of module 'vta_compute_0_0' is unconnected for instance 'compute_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1577]
+WARNING: [Synth 8-7023] instance 'compute_0' of module 'vta_compute_0_0' has 133 connections declared, but only 128 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1577]
+INFO: [Synth 8-6157] synthesizing module 'vta_fetch_0_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_fetch_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_fetch_0_0' (11#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_fetch_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'vta_fetch_0_0' is unconnected for instance 'fetch_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1706]
+WARNING: [Synth 8-7071] port 'm_axi_ins_port_AWREGION' of module 'vta_fetch_0_0' is unconnected for instance 'fetch_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1706]
+WARNING: [Synth 8-7071] port 'm_axi_ins_port_ARREGION' of module 'vta_fetch_0_0' is unconnected for instance 'fetch_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1706]
+WARNING: [Synth 8-7023] instance 'fetch_0' of module 'vta_fetch_0_0' has 64 connections declared, but only 61 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1706]
+INFO: [Synth 8-6157] synthesizing module 'vta_g2l_queue_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_g2l_queue_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_g2l_queue_0' (12#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_g2l_queue_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'vta_g2l_queue_0' is unconnected for instance 'g2l_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1768]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'vta_g2l_queue_0' is unconnected for instance 'g2l_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1768]
+WARNING: [Synth 8-7071] port 'm_axis_tuser' of module 'vta_g2l_queue_0' is unconnected for instance 'g2l_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1768]
+WARNING: [Synth 8-7023] instance 'g2l_queue' of module 'vta_g2l_queue_0' has 12 connections declared, but only 9 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1768]
+INFO: [Synth 8-6157] synthesizing module 'vta_g2s_queue_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_g2s_queue_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_g2s_queue_0' (13#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_g2s_queue_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'vta_g2s_queue_0' is unconnected for instance 'g2s_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1778]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'vta_g2s_queue_0' is unconnected for instance 'g2s_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1778]
+WARNING: [Synth 8-7071] port 'm_axis_tuser' of module 'vta_g2s_queue_0' is unconnected for instance 'g2s_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1778]
+WARNING: [Synth 8-7023] instance 'g2s_queue' of module 'vta_g2s_queue_0' has 12 connections declared, but only 9 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1778]
+INFO: [Synth 8-6157] synthesizing module 'vta_gemm_queue_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_gemm_queue_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_gemm_queue_0' (14#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_gemm_queue_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'vta_gemm_queue_0' is unconnected for instance 'gemm_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1788]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'vta_gemm_queue_0' is unconnected for instance 'gemm_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1788]
+WARNING: [Synth 8-7071] port 'm_axis_tuser' of module 'vta_gemm_queue_0' is unconnected for instance 'gemm_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1788]
+WARNING: [Synth 8-7023] instance 'gemm_queue' of module 'vta_gemm_queue_0' has 12 connections declared, but only 9 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1788]
+INFO: [Synth 8-6157] synthesizing module 'vta_inp_mem_0_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_inp_mem_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_inp_mem_0_0' (15#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_inp_mem_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'vta_inp_mem_0_0' is unconnected for instance 'inp_mem_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1798]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'vta_inp_mem_0_0' is unconnected for instance 'inp_mem_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1798]
+WARNING: [Synth 8-7023] instance 'inp_mem_0' of module 'vta_inp_mem_0_0' has 16 connections declared, but only 14 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1798]
+INFO: [Synth 8-6157] synthesizing module 'vta_l2g_queue_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_l2g_queue_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_l2g_queue_0' (16#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_l2g_queue_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'vta_l2g_queue_0' is unconnected for instance 'l2g_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1813]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'vta_l2g_queue_0' is unconnected for instance 'l2g_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1813]
+WARNING: [Synth 8-7071] port 'm_axis_tuser' of module 'vta_l2g_queue_0' is unconnected for instance 'l2g_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1813]
+WARNING: [Synth 8-7023] instance 'l2g_queue' of module 'vta_l2g_queue_0' has 12 connections declared, but only 9 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1813]
+INFO: [Synth 8-6157] synthesizing module 'vta_load_0_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_load_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_load_0_0' (17#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_load_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'vta_load_0_0' is unconnected for instance 'load_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1823]
+WARNING: [Synth 8-7071] port 'm_axi_data_port_AWREGION' of module 'vta_load_0_0' is unconnected for instance 'load_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1823]
+WARNING: [Synth 8-7071] port 'm_axi_data_port_ARREGION' of module 'vta_load_0_0' is unconnected for instance 'load_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1823]
+WARNING: [Synth 8-7023] instance 'load_0' of module 'vta_load_0_0' has 85 connections declared, but only 82 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1823]
+INFO: [Synth 8-6157] synthesizing module 'vta_load_queue_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_load_queue_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_load_queue_0' (18#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_load_queue_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'vta_load_queue_0' is unconnected for instance 'load_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1906]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'vta_load_queue_0' is unconnected for instance 'load_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1906]
+WARNING: [Synth 8-7071] port 'm_axis_tuser' of module 'vta_load_queue_0' is unconnected for instance 'load_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1906]
+WARNING: [Synth 8-7023] instance 'load_queue' of module 'vta_load_queue_0' has 12 connections declared, but only 9 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1906]
+INFO: [Synth 8-6157] synthesizing module 'vta_out_mem_0_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_out_mem_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_out_mem_0_0' (19#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_out_mem_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'vta_out_mem_0_0' is unconnected for instance 'out_mem_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1916]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'vta_out_mem_0_0' is unconnected for instance 'out_mem_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1916]
+WARNING: [Synth 8-7023] instance 'out_mem_0' of module 'vta_out_mem_0_0' has 16 connections declared, but only 14 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1916]
+INFO: [Synth 8-6157] synthesizing module 'vta_pll_clk_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_pll_clk_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'vta_pll_clk_0' (20#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_pll_clk_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'vta_proc_sys_reset_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_proc_sys_reset_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_proc_sys_reset_0' (21#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_proc_sys_reset_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'vta_proc_sys_reset_0' is unconnected for instance 'proc_sys_reset' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1935]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'vta_proc_sys_reset_0' is unconnected for instance 'proc_sys_reset' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1935]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'vta_proc_sys_reset_0' is unconnected for instance 'proc_sys_reset' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1935]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset' of module 'vta_proc_sys_reset_0' has 10 connections declared, but only 7 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1935]
+INFO: [Synth 8-6157] synthesizing module 'vta_processing_system_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_processing_system_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_processing_system_0' (22#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_processing_system_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'S_AXI_ACP_BID' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'S_AXI_ACP_RID' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'MIO' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_CAS_n' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_CKE' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_Clk_n' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_Clk' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_CS_n' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_DRSTB' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_ODT' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_RAS_n' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_WEB' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_BankAddr' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_Addr' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_VRN' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_VRP' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_DM' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_DQ' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_DQS_n' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'DDR_DQS' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'PS_SRSTB' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'PS_CLK' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7071] port 'PS_PORB' of module 'vta_processing_system_0' is unconnected for instance 'processing_system' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+WARNING: [Synth 8-7023] instance 'processing_system' of module 'vta_processing_system_0' has 109 connections declared, but only 81 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:1943]
+INFO: [Synth 8-6157] synthesizing module 'vta_s2g_queue_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_s2g_queue_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_s2g_queue_0' (23#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_s2g_queue_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'vta_s2g_queue_0' is unconnected for instance 's2g_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2025]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'vta_s2g_queue_0' is unconnected for instance 's2g_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2025]
+WARNING: [Synth 8-7071] port 'm_axis_tuser' of module 'vta_s2g_queue_0' is unconnected for instance 's2g_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2025]
+WARNING: [Synth 8-7023] instance 's2g_queue' of module 'vta_s2g_queue_0' has 12 connections declared, but only 9 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2025]
+INFO: [Synth 8-6157] synthesizing module 'vta_store_0_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_store_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_store_0_0' (24#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_store_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'vta_store_0_0' is unconnected for instance 'store_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2035]
+WARNING: [Synth 8-7071] port 'm_axi_data_port_AWREGION' of module 'vta_store_0_0' is unconnected for instance 'store_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2035]
+WARNING: [Synth 8-7071] port 'm_axi_data_port_ARREGION' of module 'vta_store_0_0' is unconnected for instance 'store_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2035]
+WARNING: [Synth 8-7023] instance 'store_0' of module 'vta_store_0_0' has 71 connections declared, but only 68 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2035]
+INFO: [Synth 8-6157] synthesizing module 'vta_store_queue_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_store_queue_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_store_queue_0' (25#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_store_queue_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'wr_rst_busy' of module 'vta_store_queue_0' is unconnected for instance 'store_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2104]
+WARNING: [Synth 8-7071] port 'rd_rst_busy' of module 'vta_store_queue_0' is unconnected for instance 'store_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2104]
+WARNING: [Synth 8-7071] port 'm_axis_tuser' of module 'vta_store_queue_0' is unconnected for instance 'store_queue' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2104]
+WARNING: [Synth 8-7023] instance 'store_queue' of module 'vta_store_queue_0' has 12 connections declared, but only 9 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2104]
+INFO: [Synth 8-6157] synthesizing module 'vta_wgt_mem_0_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_wgt_mem_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_wgt_mem_0_0' (26#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_wgt_mem_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'vta_wgt_mem_0_0' is unconnected for instance 'wgt_mem_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2114]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'vta_wgt_mem_0_0' is unconnected for instance 'wgt_mem_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2114]
+WARNING: [Synth 8-7023] instance 'wgt_mem_0' of module 'vta_wgt_mem_0_0' has 16 connections declared, but only 14 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2114]
+INFO: [Synth 8-6157] synthesizing module 'vta_wgt_mem_1_0' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_wgt_mem_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vta_wgt_mem_1_0' (27#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/.Xil/Vivado-20134-Pepsi/realtime/vta_wgt_mem_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'vta_wgt_mem_1_0' is unconnected for instance 'wgt_mem_1' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2129]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'vta_wgt_mem_1_0' is unconnected for instance 'wgt_mem_1' [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2129]
+WARNING: [Synth 8-7023] instance 'wgt_mem_1' of module 'vta_wgt_mem_1_0' has 16 connections declared, but only 14 given [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:2129]
+INFO: [Synth 8-6155] done synthesizing module 'vta' (28#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/synth/vta.v:846]
+INFO: [Synth 8-6155] done synthesizing module 'vta_wrapper' (29#1) [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/hdl/vta_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2073.922 ; gain = 0.000 ; free physical = 5570 ; free virtual = 7506
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2073.922 ; gain = 0.000 ; free physical = 5609 ; free virtual = 7544
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2073.922 ; gain = 0.000 ; free physical = 5609 ; free virtual = 7544
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2073.922 ; gain = 0.000 ; free physical = 5600 ; free virtual = 7535
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_proc_sys_reset_0/vta_proc_sys_reset_0/vta_proc_sys_reset_0_in_context.xdc] for cell 'vta_i/proc_sys_reset'
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_proc_sys_reset_0/vta_proc_sys_reset_0/vta_proc_sys_reset_0_in_context.xdc] for cell 'vta_i/proc_sys_reset'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_pll_clk_0/vta_pll_clk_0/vta_pll_clk_0_in_context.xdc] for cell 'vta_i/pll_clk'
+WARNING: [Vivado 12-584] No ports matched ''. [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_pll_clk_0/vta_pll_clk_0/vta_pll_clk_0_in_context.xdc:1]
+WARNING: [Vivado 12-584] No ports matched ''. [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_pll_clk_0/vta_pll_clk_0/vta_pll_clk_0_in_context.xdc:4]
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_pll_clk_0/vta_pll_clk_0/vta_pll_clk_0_in_context.xdc] for cell 'vta_i/pll_clk'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_axi_smc0_0/vta_axi_smc0_0/vta_axi_smc0_0_in_context.xdc] for cell 'vta_i/axi_smc0'
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_axi_smc0_0/vta_axi_smc0_0/vta_axi_smc0_0_in_context.xdc] for cell 'vta_i/axi_smc0'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_xbar_0/vta_xbar_0/vta_xbar_0_in_context.xdc] for cell 'vta_i/axi_xbar/xbar'
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_xbar_0/vta_xbar_0/vta_xbar_0_in_context.xdc] for cell 'vta_i/axi_xbar/xbar'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_fetch_0_0/vta_fetch_0_0/vta_fetch_0_0_in_context.xdc] for cell 'vta_i/fetch_0'
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_fetch_0_0/vta_fetch_0_0/vta_fetch_0_0_in_context.xdc] for cell 'vta_i/fetch_0'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_load_0_0/vta_load_0_0/vta_load_0_0_in_context.xdc] for cell 'vta_i/load_0'
+WARNING: [Vivado 12-584] No ports matched ''. [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_load_0_0/vta_load_0_0/vta_load_0_0_in_context.xdc:2]
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_load_0_0/vta_load_0_0/vta_load_0_0_in_context.xdc] for cell 'vta_i/load_0'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_compute_0_0/vta_compute_0_0/vta_compute_0_0_in_context.xdc] for cell 'vta_i/compute_0'
+WARNING: [Vivado 12-584] No ports matched ''. [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_compute_0_0/vta_compute_0_0/vta_compute_0_0_in_context.xdc:2]
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_compute_0_0/vta_compute_0_0/vta_compute_0_0_in_context.xdc] for cell 'vta_i/compute_0'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_store_0_0/vta_store_0_0/vta_store_0_0_in_context.xdc] for cell 'vta_i/store_0'
+WARNING: [Vivado 12-584] No ports matched ''. [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_store_0_0/vta_store_0_0/vta_store_0_0_in_context.xdc:2]
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_store_0_0/vta_store_0_0/vta_store_0_0_in_context.xdc] for cell 'vta_i/store_0'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_load_queue_0/vta_load_queue_0/vta_store_queue_0_in_context.xdc] for cell 'vta_i/load_queue'
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_load_queue_0/vta_load_queue_0/vta_store_queue_0_in_context.xdc] for cell 'vta_i/load_queue'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_gemm_queue_0/vta_gemm_queue_0/vta_store_queue_0_in_context.xdc] for cell 'vta_i/gemm_queue'
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_gemm_queue_0/vta_gemm_queue_0/vta_store_queue_0_in_context.xdc] for cell 'vta_i/gemm_queue'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_store_queue_0/vta_store_queue_0/vta_store_queue_0_in_context.xdc] for cell 'vta_i/store_queue'
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_store_queue_0/vta_store_queue_0/vta_store_queue_0_in_context.xdc] for cell 'vta_i/store_queue'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_l2g_queue_0/vta_l2g_queue_0/vta_l2g_queue_0_in_context.xdc] for cell 'vta_i/l2g_queue'
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_l2g_queue_0/vta_l2g_queue_0/vta_l2g_queue_0_in_context.xdc] for cell 'vta_i/l2g_queue'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_g2l_queue_0/vta_g2l_queue_0/vta_l2g_queue_0_in_context.xdc] for cell 'vta_i/g2l_queue'
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_g2l_queue_0/vta_g2l_queue_0/vta_l2g_queue_0_in_context.xdc] for cell 'vta_i/g2l_queue'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_g2s_queue_0/vta_g2s_queue_0/vta_l2g_queue_0_in_context.xdc] for cell 'vta_i/g2s_queue'
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_g2s_queue_0/vta_g2s_queue_0/vta_l2g_queue_0_in_context.xdc] for cell 'vta_i/g2s_queue'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_s2g_queue_0/vta_s2g_queue_0/vta_l2g_queue_0_in_context.xdc] for cell 'vta_i/s2g_queue'
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_s2g_queue_0/vta_s2g_queue_0/vta_l2g_queue_0_in_context.xdc] for cell 'vta_i/s2g_queue'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_inp_mem_0_0/vta_inp_mem_0_0/vta_inp_mem_0_0_in_context.xdc] for cell 'vta_i/inp_mem_0'
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_inp_mem_0_0/vta_inp_mem_0_0/vta_inp_mem_0_0_in_context.xdc] for cell 'vta_i/inp_mem_0'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_wgt_mem_0_0/vta_wgt_mem_0_0/vta_wgt_mem_0_0_in_context.xdc] for cell 'vta_i/wgt_mem_0'
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_wgt_mem_0_0/vta_wgt_mem_0_0/vta_wgt_mem_0_0_in_context.xdc] for cell 'vta_i/wgt_mem_0'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_wgt_mem_1_0/vta_wgt_mem_1_0/vta_wgt_mem_0_0_in_context.xdc] for cell 'vta_i/wgt_mem_1'
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_wgt_mem_1_0/vta_wgt_mem_1_0/vta_wgt_mem_0_0_in_context.xdc] for cell 'vta_i/wgt_mem_1'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_out_mem_0_0/vta_out_mem_0_0/vta_inp_mem_0_0_in_context.xdc] for cell 'vta_i/out_mem_0'
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_out_mem_0_0/vta_out_mem_0_0/vta_inp_mem_0_0_in_context.xdc] for cell 'vta_i/out_mem_0'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_processing_system_0/vta_processing_system_0/vta_processing_system_0_in_context.xdc] for cell 'vta_i/processing_system'
+WARNING: [Vivado 12-584] No ports matched ''. [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_processing_system_0/vta_processing_system_0/vta_processing_system_0_in_context.xdc:2]
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_processing_system_0/vta_processing_system_0/vta_processing_system_0_in_context.xdc] for cell 'vta_i/processing_system'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_auto_pc_0/vta_auto_pc_0/vta_auto_pc_0_in_context.xdc] for cell 'vta_i/axi_xbar/s00_couplers/auto_pc'
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_auto_pc_0/vta_auto_pc_0/vta_auto_pc_0_in_context.xdc] for cell 'vta_i/axi_xbar/s00_couplers/auto_pc'
+Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2191.598 ; gain = 0.000 ; free physical = 5456 ; free virtual = 7394
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.70 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2191.598 ; gain = 0.000 ; free physical = 5442 ; free virtual = 7379
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'vta_i/inp_mem_0' at clock pin 'clka' is different from the actual clock period '7.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'vta_i/out_mem_0' at clock pin 'clka' is different from the actual clock period '7.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'vta_i/wgt_mem_0' at clock pin 'clka' is different from the actual clock period '7.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'vta_i/wgt_mem_1' at clock pin 'clka' is different from the actual clock period '7.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2197.535 ; gain = 123.613 ; free physical = 5539 ; free virtual = 7476
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2197.535 ; gain = 123.613 ; free physical = 5539 ; free virtual = 7476
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for vta_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/proc_sys_reset. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/pll_clk. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/axi_smc0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/axi_xbar/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/axi_xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/fetch_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/load_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/compute_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/store_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/load_queue. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/gemm_queue. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/store_queue. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/l2g_queue. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/g2l_queue. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/g2s_queue. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/s2g_queue. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/inp_mem_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/wgt_mem_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/wgt_mem_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/out_mem_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/processing_system. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for vta_i/axi_xbar/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2197.535 ; gain = 123.613 ; free physical = 5539 ; free virtual = 7476
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2197.535 ; gain = 123.613 ; free physical = 5540 ; free virtual = 7478
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:25 . Memory (MB): peak = 2197.535 ; gain = 123.613 ; free physical = 5531 ; free virtual = 7469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 2197.535 ; gain = 123.613 ; free physical = 5410 ; free virtual = 7348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 2197.535 ; gain = 123.613 ; free physical = 5410 ; free virtual = 7348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 2197.535 ; gain = 123.613 ; free physical = 5410 ; free virtual = 7348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 2197.535 ; gain = 123.613 ; free physical = 5409 ; free virtual = 7347
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 2197.535 ; gain = 123.613 ; free physical = 5409 ; free virtual = 7347
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 2197.535 ; gain = 123.613 ; free physical = 5408 ; free virtual = 7346
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 2197.535 ; gain = 123.613 ; free physical = 5408 ; free virtual = 7346
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 2197.535 ; gain = 123.613 ; free physical = 5408 ; free virtual = 7346
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 2197.535 ; gain = 123.613 ; free physical = 5408 ; free virtual = 7346
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------+----------+
+|      |BlackBox name           |Instances |
++------+------------------------+----------+
+|1     |vta_xbar_0              |         1|
+|2     |vta_auto_pc_0           |         1|
+|3     |vta_axi_smc0_0          |         1|
+|4     |vta_compute_0_0         |         1|
+|5     |vta_fetch_0_0           |         1|
+|6     |vta_g2l_queue_0         |         1|
+|7     |vta_g2s_queue_0         |         1|
+|8     |vta_gemm_queue_0        |         1|
+|9     |vta_inp_mem_0_0         |         1|
+|10    |vta_l2g_queue_0         |         1|
+|11    |vta_load_0_0            |         1|
+|12    |vta_load_queue_0        |         1|
+|13    |vta_out_mem_0_0         |         1|
+|14    |vta_pll_clk_0           |         1|
+|15    |vta_proc_sys_reset_0    |         1|
+|16    |vta_processing_system_0 |         1|
+|17    |vta_s2g_queue_0         |         1|
+|18    |vta_store_0_0           |         1|
+|19    |vta_store_queue_0       |         1|
+|20    |vta_wgt_mem_0_0         |         1|
+|21    |vta_wgt_mem_1_0         |         1|
++------+------------------------+----------+
+
+Report Cell Usage: 
++------+----------------------+------+
+|      |Cell                  |Count |
++------+----------------------+------+
+|1     |vta_auto_pc           |     1|
+|2     |vta_axi_smc0          |     1|
+|3     |vta_compute_0         |     1|
+|4     |vta_fetch_0           |     1|
+|5     |vta_g2l_queue         |     1|
+|6     |vta_g2s_queue         |     1|
+|7     |vta_gemm_queue        |     1|
+|8     |vta_inp_mem_0         |     1|
+|9     |vta_l2g_queue         |     1|
+|10    |vta_load_0            |     1|
+|11    |vta_load_queue        |     1|
+|12    |vta_out_mem_0         |     1|
+|13    |vta_pll_clk           |     1|
+|14    |vta_proc_sys_reset    |     1|
+|15    |vta_processing_system |     1|
+|16    |vta_s2g_queue         |     1|
+|17    |vta_store_0           |     1|
+|18    |vta_store_queue       |     1|
+|19    |vta_wgt_mem_0         |     1|
+|20    |vta_wgt_mem_1         |     1|
+|21    |vta_xbar              |     1|
++------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 2197.535 ; gain = 123.613 ; free physical = 5408 ; free virtual = 7346
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 2197.535 ; gain = 0.000 ; free physical = 5467 ; free virtual = 7404
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:34 . Memory (MB): peak = 2197.535 ; gain = 123.613 ; free physical = 5469 ; free virtual = 7406
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2197.535 ; gain = 0.000 ; free physical = 5550 ; free virtual = 7488
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2197.535 ; gain = 0.000 ; free physical = 5486 ; free virtual = 7423
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+73 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:01:01 . Memory (MB): peak = 2197.535 ; gain = 123.656 ; free physical = 5536 ; free virtual = 7474
+INFO: [Common 17-1381] The checkpoint '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1/vta_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file vta_wrapper_utilization_synth.rpt -pb vta_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 20 14:17:29 2024...

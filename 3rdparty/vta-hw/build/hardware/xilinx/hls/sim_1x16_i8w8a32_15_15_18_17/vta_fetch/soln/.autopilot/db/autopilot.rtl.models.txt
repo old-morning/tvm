@@ -1,0 +1,4 @@
+fetch_CONTROL_BUS_s_axi
+fetch_ins_port_m_axi
+regslice_core
+fetch

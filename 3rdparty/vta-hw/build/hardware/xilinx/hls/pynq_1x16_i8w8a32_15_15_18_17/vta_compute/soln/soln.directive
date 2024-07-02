@@ -1,0 +1,69 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="load" label="" functionLabel="">
+            <pragma name="ARRAY_RESHAPE">
+                <option name="variable" value="inp_mem" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="2"/>
+                <option name="dim" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="compute" label="" functionLabel="">
+            <pragma name="ARRAY_RESHAPE">
+                <option name="variable" value="inp_mem" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="2"/>
+                <option name="dim" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="load" label="" functionLabel="">
+            <pragma name="ARRAY_RESHAPE">
+                <option name="variable" value="wgt_mem" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="16"/>
+                <option name="dim" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="compute" label="" functionLabel="">
+            <pragma name="ARRAY_RESHAPE">
+                <option name="variable" value="wgt_mem" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="16"/>
+                <option name="dim" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="load" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="wgt_mem" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="2"/>
+                <option name="dim" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="compute" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="wgt_mem" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="2"/>
+                <option name="dim" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="compute" label="" functionLabel="">
+            <pragma name="ARRAY_RESHAPE">
+                <option name="variable" value="out_mem" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="2"/>
+                <option name="dim" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="store" label="" functionLabel="">
+            <pragma name="ARRAY_RESHAPE">
+                <option name="variable" value="out_mem" positionalBoolean="4"/>
+                <option name="block" value="" positionalBoolean="type"/>
+                <option name="factor" value="2"/>
+                <option name="dim" value="2"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

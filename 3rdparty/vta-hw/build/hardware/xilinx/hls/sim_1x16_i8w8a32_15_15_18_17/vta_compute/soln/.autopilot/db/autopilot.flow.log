@@ -1,0 +1,992 @@
+INFO-FLOW: Workspace /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln opened at Thu Jun 20 10:13:34 CST 2024
+Command     open_solution done; 0.15 sec.
+Execute     set_part xc7z020clg484-1 
+Execute       ap_part_info -name xc7z020clg484-1 -data single -quiet 
+Execute       ap_part_info -name xc7z020clg484-1 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg484:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Command         import_lib done; 0.15 sec.
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.25 sec.
+Command         ap_source done; 0.25 sec.
+Execute         ap_part_info -data single -name xc7z020-clg484-1 
+Execute         ap_part_info -name xc7z020-clg484-1 -data resources 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.45 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.63 sec.
+Execute     create_clock -period 7 -name default 
+Execute       config_clock -quiet -name default -period 7 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+Execute     set_directive_array_reshape -type block -factor 2 -dim 2 load inp_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+Execute     set_directive_array_reshape -type block -factor 2 -dim 2 compute inp_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+Execute     set_directive_array_reshape -type block -factor 16 -dim 2 load wgt_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+Execute     set_directive_array_reshape -type block -factor 16 -dim 2 compute wgt_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+Execute     set_directive_array_partition -type block -factor 2 -dim 2 load wgt_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+Execute     set_directive_array_partition -type block -factor 2 -dim 2 compute wgt_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+Execute     set_directive_array_reshape -type block -factor 2 -dim 2 compute out_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredout_mem block=positionBoolean0type factor=2 dim=2 
+Execute     set_directive_array_reshape -type block -factor 2 -dim 2 store out_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredout_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredout_mem block=positionBoolean0type factor=2 dim=2 
+Execute     csynth_design 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute         get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute         get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file '/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc' ... 
+INFO-FLOW: Compiling one TU...
+Execute         is_m_axi_addr64 
+INFO-FLOW: Handling /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc as C++
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         is_encrypted /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute         clang  -fno-limit-debug-info -gcc-toolchain "/mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc"   -I/mnt/e/_AI/tvm/include -I/mnt/e/_AI/tvm/3rdparty/vta-hw/include -I/mnt/e/_AI/tvm/3rdparty/dlpack/include -I/mnt/e/_AI/tvm/3rdparty/dmlc-core/include -DVTA_TARGET=sim -DVTA_HW_VER=0.0.2 -DVTA_LOG_INP_WIDTH=3 -DVTA_LOG_WGT_WIDTH=3 -DVTA_LOG_ACC_WIDTH=5 -DVTA_LOG_BATCH=0 -DVTA_LOG_BLOCK=4 -DVTA_LOG_UOP_BUFF_SIZE=15 -DVTA_LOG_INP_BUFF_SIZE=15 -DVTA_LOG_WGT_BUFF_SIZE=18 -DVTA_LOG_ACC_BUFF_SIZE=17 -DVTA_LOG_BLOCK_IN=4 -DVTA_LOG_BLOCK_OUT=4 -DVTA_LOG_OUT_WIDTH=3 -DVTA_LOG_OUT_BUFF_SIZE=15 -DVTA_LOG_BUS_WIDTH=6 -DVTA_IP_REG_MAP_RANGE=0x1000 -DVTA_FETCH_ADDR=0x43C00000 -DVTA_LOAD_ADDR=0x43C01000 -DVTA_COMPUTE_ADDR=0x43C02000 -DVTA_STORE_ADDR=0x43C03000 -DVTA_FETCH_INSN_COUNT_OFFSET=16 -DVTA_FETCH_INSN_ADDR_OFFSET=24 -DVTA_LOAD_INP_ADDR_OFFSET=16 -DVTA_LOAD_WGT_ADDR_OFFSET=24 -DVTA_COMPUTE_DONE_WR_OFFSET=16 -DVTA_COMPUTE_DONE_RD_OFFSET=24 -DVTA_COMPUTE_UOP_ADDR_OFFSET=32 -DVTA_COMPUTE_BIAS_ADDR_OFFSET=40 -DVTA_STORE_OUT_ADDR_OFFSET=16 -DVTA_COHERENT_ACCESSES=true  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "/mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pp.0.cc" 
+INFO-FLOW: exec /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc -I/mnt/e/_AI/tvm/include -I/mnt/e/_AI/tvm/3rdparty/vta-hw/include -I/mnt/e/_AI/tvm/3rdparty/dlpack/include -I/mnt/e/_AI/tvm/3rdparty/dmlc-core/include -DVTA_TARGET=sim -DVTA_HW_VER=0.0.2 -DVTA_LOG_INP_WIDTH=3 -DVTA_LOG_WGT_WIDTH=3 -DVTA_LOG_ACC_WIDTH=5 -DVTA_LOG_BATCH=0 -DVTA_LOG_BLOCK=4 -DVTA_LOG_UOP_BUFF_SIZE=15 -DVTA_LOG_INP_BUFF_SIZE=15 -DVTA_LOG_WGT_BUFF_SIZE=18 -DVTA_LOG_ACC_BUFF_SIZE=17 -DVTA_LOG_BLOCK_IN=4 -DVTA_LOG_BLOCK_OUT=4 -DVTA_LOG_OUT_WIDTH=3 -DVTA_LOG_OUT_BUFF_SIZE=15 -DVTA_LOG_BUS_WIDTH=6 -DVTA_IP_REG_MAP_RANGE=0x1000 -DVTA_FETCH_ADDR=0x43C00000 -DVTA_LOAD_ADDR=0x43C01000 -DVTA_COMPUTE_ADDR=0x43C02000 -DVTA_STORE_ADDR=0x43C03000 -DVTA_FETCH_INSN_COUNT_OFFSET=16 -DVTA_FETCH_INSN_ADDR_OFFSET=24 -DVTA_LOAD_INP_ADDR_OFFSET=16 -DVTA_LOAD_WGT_ADDR_OFFSET=24 -DVTA_COMPUTE_DONE_WR_OFFSET=16 -DVTA_COMPUTE_DONE_RD_OFFSET=24 -DVTA_COMPUTE_UOP_ADDR_OFFSET=32 -DVTA_COMPUTE_BIAS_ADDR_OFFSET=40 -DVTA_STORE_OUT_ADDR_OFFSET=16 -DVTA_COHERENT_ACCESSES=true -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/autopilot -I /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pp.0.cc
+Command         clang done; 2.88 sec.
+Execute         tidy_31 xilinx-xfmat-array-geometry /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pp.0.cc std=gnu++98 
+INFO-FLOW: exec /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0
+Command         tidy_31 done; 1.66 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute         clang -syntaxcheck -src /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pp.0.cc  -fno-limit-debug-info -gcc-toolchain "/mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/tools/gcc" -hls  -I/mnt/e/_AI/tvm/include -I/mnt/e/_AI/tvm/3rdparty/vta-hw/include -I/mnt/e/_AI/tvm/3rdparty/dlpack/include -I/mnt/e/_AI/tvm/3rdparty/dmlc-core/include -DVTA_TARGET=sim -DVTA_HW_VER=0.0.2 -DVTA_LOG_INP_WIDTH=3 -DVTA_LOG_WGT_WIDTH=3 -DVTA_LOG_ACC_WIDTH=5 -DVTA_LOG_BATCH=0 -DVTA_LOG_BLOCK=4 -DVTA_LOG_UOP_BUFF_SIZE=15 -DVTA_LOG_INP_BUFF_SIZE=15 -DVTA_LOG_WGT_BUFF_SIZE=18 -DVTA_LOG_ACC_BUFF_SIZE=17 -DVTA_LOG_BLOCK_IN=4 -DVTA_LOG_BLOCK_OUT=4 -DVTA_LOG_OUT_WIDTH=3 -DVTA_LOG_OUT_BUFF_SIZE=15 -DVTA_LOG_BUS_WIDTH=6 -DVTA_IP_REG_MAP_RANGE=0x1000 -DVTA_FETCH_ADDR=0x43C00000 -DVTA_LOAD_ADDR=0x43C01000 -DVTA_COMPUTE_ADDR=0x43C02000 -DVTA_STORE_ADDR=0x43C03000 -DVTA_FETCH_INSN_COUNT_OFFSET=16 -DVTA_FETCH_INSN_ADDR_OFFSET=24 -DVTA_LOAD_INP_ADDR_OFFSET=16 -DVTA_LOAD_WGT_ADDR_OFFSET=24 -DVTA_COMPUTE_DONE_WR_OFFSET=16 -DVTA_COMPUTE_DONE_RD_OFFSET=24 -DVTA_COMPUTE_UOP_ADDR_OFFSET=32 -DVTA_COMPUTE_BIAS_ADDR_OFFSET=40 -DVTA_STORE_OUT_ADDR_OFFSET=16 -DVTA_COHERENT_ACCESSES=true  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "/mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pp.0.cc"  -o "/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/tools/gcc -hls -I/mnt/e/_AI/tvm/include -I/mnt/e/_AI/tvm/3rdparty/vta-hw/include -I/mnt/e/_AI/tvm/3rdparty/dlpack/include -I/mnt/e/_AI/tvm/3rdparty/dmlc-core/include -DVTA_TARGET=sim -DVTA_HW_VER=0.0.2 -DVTA_LOG_INP_WIDTH=3 -DVTA_LOG_WGT_WIDTH=3 -DVTA_LOG_ACC_WIDTH=5 -DVTA_LOG_BATCH=0 -DVTA_LOG_BLOCK=4 -DVTA_LOG_UOP_BUFF_SIZE=15 -DVTA_LOG_INP_BUFF_SIZE=15 -DVTA_LOG_WGT_BUFF_SIZE=18 -DVTA_LOG_ACC_BUFF_SIZE=17 -DVTA_LOG_BLOCK_IN=4 -DVTA_LOG_BLOCK_OUT=4 -DVTA_LOG_OUT_WIDTH=3 -DVTA_LOG_OUT_BUFF_SIZE=15 -DVTA_LOG_BUS_WIDTH=6 -DVTA_IP_REG_MAP_RANGE=0x1000 -DVTA_FETCH_ADDR=0x43C00000 -DVTA_LOAD_ADDR=0x43C01000 -DVTA_COMPUTE_ADDR=0x43C02000 -DVTA_STORE_ADDR=0x43C03000 -DVTA_FETCH_INSN_COUNT_OFFSET=16 -DVTA_FETCH_INSN_ADDR_OFFSET=24 -DVTA_LOAD_INP_ADDR_OFFSET=16 -DVTA_LOAD_WGT_ADDR_OFFSET=24 -DVTA_COMPUTE_DONE_WR_OFFSET=16 -DVTA_COMPUTE_DONE_RD_OFFSET=24 -DVTA_COMPUTE_UOP_ADDR_OFFSET=32 -DVTA_COMPUTE_BIAS_ADDR_OFFSET=40 -DVTA_STORE_OUT_ADDR_OFFSET=16 -DVTA_COHERENT_ACCESSES=true -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/autopilot -I /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pp.0.cc -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/useless.bc
+Command         clang done; 2.94 sec.
+INFO-FLOW: Done: GCC PP time: 7.5 seconds per iteration
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredout_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredout_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredout_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredout_mem block=positionBoolean0type factor=2 dim=2 
+Execute         list_core -type functional_unit 
+Execute         tidy_31 xilinx-systemc-detector /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pp.0.cc std=gnu++98 -directive=/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/.systemc_flag -quiet -fix-errors /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0
+Command         tidy_31 done; 1.65 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute         tidy_31 xilinx-directive2pragma /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pp.0.cc std=gnu++98 -directive=/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/all.directive.json -quiet -fix-errors /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0
+Command         tidy_31 done; 2.07 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/xilinx-dataflow-lawyer.vta.pp.0.cc.diag.yml /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/xilinx-dataflow-lawyer.vta.pp.0.cc.out.log 2> /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/xilinx-dataflow-lawyer.vta.pp.0.cc.err.log 
+Command         ap_eval done; 1.61 sec.
+Execute         tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pp.0.cc std=gnu++98 
+Execute           ap_eval exec -ignorestderr /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/tidy-3.1.vta.pp.0.cc.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0 > /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/tidy-3.1.vta.pp.0.cc.out.log 2> /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/tidy-3.1.vta.pp.0.cc.err.log 
+Command           ap_eval done; 2.26 sec.
+Execute           ap_eval exec -ignorestderr /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pp.0.cc -- -std=gnu++98 -fhls -ferror-limit=0 > /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/xilinx-legacy-rewriter.vta.pp.0.cc.out.log 2> /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/xilinx-legacy-rewriter.vta.pp.0.cc.err.log 
+Command           ap_eval done; 1.76 sec.
+Command         tidy_31 done; 4.11 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 7.8 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute         tidy_31 xilinx-ssdm-intrinsics-arguments /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pragma.1.cc std=gnu++98 
+INFO-FLOW: exec /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pragma.1.cc -- -std=gnu++98 -fhls -ferror-limit=0
+Command         tidy_31 done; 2.37 sec.
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+INFO-FLOW: Processing labels
+Execute         clang -src /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pragma.2.cc  -fno-limit-debug-info -gcc-toolchain /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pragma.2.cc"  -I/mnt/e/_AI/tvm/include -I/mnt/e/_AI/tvm/3rdparty/vta-hw/include -I/mnt/e/_AI/tvm/3rdparty/dlpack/include -I/mnt/e/_AI/tvm/3rdparty/dmlc-core/include -DVTA_TARGET=sim -DVTA_HW_VER=0.0.2 -DVTA_LOG_INP_WIDTH=3 -DVTA_LOG_WGT_WIDTH=3 -DVTA_LOG_ACC_WIDTH=5 -DVTA_LOG_BATCH=0 -DVTA_LOG_BLOCK=4 -DVTA_LOG_UOP_BUFF_SIZE=15 -DVTA_LOG_INP_BUFF_SIZE=15 -DVTA_LOG_WGT_BUFF_SIZE=18 -DVTA_LOG_ACC_BUFF_SIZE=17 -DVTA_LOG_BLOCK_IN=4 -DVTA_LOG_BLOCK_OUT=4 -DVTA_LOG_OUT_WIDTH=3 -DVTA_LOG_OUT_BUFF_SIZE=15 -DVTA_LOG_BUS_WIDTH=6 -DVTA_IP_REG_MAP_RANGE=0x1000 -DVTA_FETCH_ADDR=0x43C00000 -DVTA_LOAD_ADDR=0x43C01000 -DVTA_COMPUTE_ADDR=0x43C02000 -DVTA_STORE_ADDR=0x43C03000 -DVTA_FETCH_INSN_COUNT_OFFSET=16 -DVTA_FETCH_INSN_ADDR_OFFSET=24 -DVTA_LOAD_INP_ADDR_OFFSET=16 -DVTA_LOAD_WGT_ADDR_OFFSET=24 -DVTA_COMPUTE_DONE_WR_OFFSET=16 -DVTA_COMPUTE_DONE_RD_OFFSET=24 -DVTA_COMPUTE_UOP_ADDR_OFFSET=32 -DVTA_COMPUTE_BIAS_ADDR_OFFSET=40 -DVTA_STORE_OUT_ADDR_OFFSET=16 -DVTA_COHERENT_ACCESSES=true  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/autopilot" -I "/mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.bc" 
+INFO-FLOW: exec /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.pragma.2.cc -I/mnt/e/_AI/tvm/include -I/mnt/e/_AI/tvm/3rdparty/vta-hw/include -I/mnt/e/_AI/tvm/3rdparty/dlpack/include -I/mnt/e/_AI/tvm/3rdparty/dmlc-core/include -DVTA_TARGET=sim -DVTA_HW_VER=0.0.2 -DVTA_LOG_INP_WIDTH=3 -DVTA_LOG_WGT_WIDTH=3 -DVTA_LOG_ACC_WIDTH=5 -DVTA_LOG_BATCH=0 -DVTA_LOG_BLOCK=4 -DVTA_LOG_UOP_BUFF_SIZE=15 -DVTA_LOG_INP_BUFF_SIZE=15 -DVTA_LOG_WGT_BUFF_SIZE=18 -DVTA_LOG_ACC_BUFF_SIZE=17 -DVTA_LOG_BLOCK_IN=4 -DVTA_LOG_BLOCK_OUT=4 -DVTA_LOG_OUT_WIDTH=3 -DVTA_LOG_OUT_BUFF_SIZE=15 -DVTA_LOG_BUS_WIDTH=6 -DVTA_IP_REG_MAP_RANGE=0x1000 -DVTA_FETCH_ADDR=0x43C00000 -DVTA_LOAD_ADDR=0x43C01000 -DVTA_COMPUTE_ADDR=0x43C02000 -DVTA_STORE_ADDR=0x43C03000 -DVTA_FETCH_INSN_COUNT_OFFSET=16 -DVTA_FETCH_INSN_ADDR_OFFSET=24 -DVTA_LOAD_INP_ADDR_OFFSET=16 -DVTA_LOAD_WGT_ADDR_OFFSET=24 -DVTA_COMPUTE_DONE_WR_OFFSET=16 -DVTA_COMPUTE_DONE_RD_OFFSET=24 -DVTA_COMPUTE_UOP_ADDR_OFFSET=32 -DVTA_COMPUTE_BIAS_ADDR_OFFSET=40 -DVTA_STORE_OUT_ADDR_OFFSET=16 -DVTA_COHERENT_ACCESSES=true -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/autopilot -I /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.bc
+Command         clang done; 3.11 sec.
+INFO-FLOW: Linking Debug ...
+Execute         llvm-ld /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/vta.g.bc -hls-opt -except-internalize compute -L/mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/lib -lhlsm -lhlsmc++ -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.g 
+Command         llvm-ld done; 1.32 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:23 ; elapsed = 00:05:00 . Memory (MB): peak = 1503.270 ; gain = 1099.754 ; free physical = 6711 ; free virtual = 9040
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:23 ; elapsed = 00:05:00 . Memory (MB): peak = 1503.270 ; gain = 1099.754 ; free physical = 6711 ; free virtual = 9040
+Execute         get_config_sdx -target 
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute           transform -promote-dbg-pointer /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.pp.bc -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.pp.0.bc -f 
+Execute           llvm-ld /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.pp.0.bc -disable-opt -L/mnt/e/_AI/tools/Xilinx/Vivado/2020.1/lnx64/lib -lfloatconversion -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.g.0 
+Command           llvm-ld done; 1.31 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -stream-depth-lower -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top compute -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.g.0.bc -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-603] Inlining function 'load_pad_2d<ap_uint<64>, 8, 64>' into 'compute' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:489).
+INFO: [XFORM 203-603] Inlining function 'read_tensor<ap_uint<64>, ap_int<8>, ap_uint<11>, 64, 8, 16, 16>' into 'gemm' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:277).
+INFO: [XFORM 203-603] Inlining function 'read_tensor<ap_uint<64>, ap_int<8>, ap_uint<12>, 64, 8, 1, 16>' into 'gemm' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:280).
+INFO: [XFORM 203-603] Inlining function 'read_tensor<ap_uint<64>, ap_int<32>, ap_uint<12>, 64, 32, 1, 16>' into 'alu' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:366).
+INFO: [XFORM 203-603] Inlining function 'read_tensor<ap_uint<64>, ap_int<32>, ap_uint<12>, 64, 32, 1, 16>' into 'alu' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:363).
+INFO: [XFORM 203-603] Inlining function 'read_tensor<ap_uint<64>, ap_int<32>, ap_uint<12>, 64, 32, 1, 16>' into 'gemm' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:283).
+INFO: [XFORM 203-603] Inlining function 'write_tensor<ap_uint<64>, ap_int<32>, ap_uint<12>, 64, 32, 1, 16>' into 'alu' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:401).
+INFO: [XFORM 203-603] Inlining function 'write_tensor<ap_uint<64>, ap_int<32>, ap_uint<12>, 64, 32, 1, 16>' into 'gemm' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:311).
+INFO: [XFORM 203-603] Inlining function 'write_tensor<ap_uint<64>, ap_int<8>, ap_uint<12>, 64, 8, 1, 16>' into 'alu' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:403).
+INFO: [XFORM 203-603] Inlining function 'write_tensor<ap_uint<64>, ap_int<8>, ap_uint<12>, 64, 8, 1, 16>' into 'gemm' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:313).
+INFO: [XFORM 203-603] Inlining function 'gemm' into 'compute' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:503).
+INFO: [XFORM 203-603] Inlining function 'alu' into 'compute' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:505).
+Command           transform done; 0.45 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:25 ; elapsed = 00:05:02 . Memory (MB): peak = 1503.270 ; gain = 1099.754 ; free physical = 6708 ; free virtual = 9038
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.g.1.bc -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.g.2.prechk.bc -f 
+Command           transform done; 0.27 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.g.2.prechk.bc -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:109: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:25 ; elapsed = 00:05:02 . Memory (MB): peak = 1503.270 ; gain = 1099.754 ; free physical = 6708 ; free virtual = 9037
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.g.1.bc to /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.o.1.bc -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:62) in function 'compute' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'READ_GEMM_UOP' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:262) in function 'compute' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'READ_ALU_UOP' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:350) in function 'compute' for pipelining.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'reset_mem<ap_uint<64>, 8>' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:33).
+WARNING: [XFORM 203-503] Cannot unroll loop 'memcpy.acc_mem.V.addr.biases.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:67) in function 'compute': cannot completely unroll a loop with a variable trip count.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1.1.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:104) in function 'compute' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1.1.1.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:106) in function 'compute' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1.1.2' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:104) in function 'compute' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1.1.2.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:106) in function 'compute' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1.1.3' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:104) in function 'compute' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1.1.3.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:106) in function 'compute' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1.1.4' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:288) in function 'compute' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1.1.4.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:289) in function 'compute' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1.1.4.1.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:295) in function 'compute' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1.1.5' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:121) in function 'compute' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1.1.5.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:123) in function 'compute' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1.1.6' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:121) in function 'compute' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1.1.6.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:123) in function 'compute' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1.1.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:104) in function 'compute' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1.1.1.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:106) in function 'compute' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1.1.2' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:104) in function 'compute' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1.1.2.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:106) in function 'compute' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1.1.3' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:371) in function 'compute' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1.1.3.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:372) in function 'compute' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1.1.4' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:121) in function 'compute' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1.1.4.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:123) in function 'compute' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1.1.5' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:121) in function 'compute' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1.1.5.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:123) in function 'compute' completely with a factor of 8.
+WARNING: [XFORM 203-503] Cannot unroll loop 'Loop-1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:37) in function 'reset_mem<ap_uint<64>, 8>': cannot completely unroll a loop with a variable trip count.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:38) in function 'reset_mem<ap_uint<64>, 8>' completely with a factor of 8.
+INFO: [XFORM 203-102] Partitioning array 'src_tensor.i' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'dst_tensor.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:365) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'o_tensor.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:368) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'i_tensor.i' in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'a_tensor.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:282) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'o_tensor.V.1' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:285) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'src_tensor.i.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'dst_tensor.V.0' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:365) automatically.
+INFO: [XFORM 203-102] Partitioning array 'o_tensor.V.0' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:368) automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i.1' automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i.2' automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i.3' automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i.4' automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i.5' automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i.6' automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i.7' automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i.8' automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i.9' automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i.10' automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i.11' automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i.12' automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i.13' automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i.14' automatically.
+INFO: [XFORM 203-102] Partitioning array 'w_tensor.i.15' automatically.
+INFO: [XFORM 203-102] Partitioning array 'i_tensor.i.0' automatically.
+INFO: [XFORM 203-102] Partitioning array 'a_tensor.V.0' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:282) automatically.
+INFO: [XFORM 203-102] Partitioning array 'o_tensor.V.1.0' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:285) automatically.
+WARNING: [XFORM 203-180] Applying partition directive (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:427:1) and reshape directive (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:427:1) on the same variable 'wgt_mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:425) may lead to unexpected synthesis behaviors.
+INFO: [XFORM 203-131] Reshaping array 'inp_mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:424) in dimension 2 completely.
+INFO: [XFORM 203-131] Reshaping array 'acc_mem.V'  in dimension 2 completely.
+INFO: [XFORM 203-131] Reshaping array 'wgt_mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:425) in dimension 2 with a block factor of 16.
+INFO: [XFORM 203-131] Reshaping array 'out_mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:426) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'wgt_mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:425) in dimension 2 completely.
+Command           transform done; 5.34 sec.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.o.1.tmp.bc -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:350:78) to (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:350:70) in function 'compute'... converting 145 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'compute' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:416)...275 expression(s) balanced.
+Command           transform done; 2.85 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:33 ; elapsed = 00:05:11 . Memory (MB): peak = 1503.270 ; gain = 1099.754 ; free physical = 6621 ; free virtual = 8985
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.o.2.bc -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-2' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:62:19) in function 'compute' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [XFORM 203-541] Flattening a loop nest 'EXE_IN_LOOP' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:259:70) in function 'compute'.
+INFO: [XFORM 203-541] Flattening a loop nest 'EXE_OUT_LOOP' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:253:73) in function 'compute'.
+INFO: [XFORM 203-541] Flattening a loop nest 'EXE_IN_LOOP' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:348:70) in function 'compute'.
+INFO: [XFORM 203-541] Flattening a loop nest 'EXE_OUT_LOOP' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:343:73) in function 'compute'.
+WARNING: [XFORM 203-631] Renaming function 'reset_mem<ap_uint<64>, 8>' to 'reset_mem' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:37:30)
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'acc_mem.V'.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'data_port' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:67:12). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of variable length on port 'uop_port' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:485:35). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-472] Inferring partial write operation for 'mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:40:6)
+INFO: [HLS 200-472] Inferring partial write operation for 'uop_mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:485:35)
+INFO: [HLS 200-472] Inferring partial write operation for 'acc_mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:67:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'acc_mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:128:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'out_mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:128:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'acc_mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:128:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'out_mem.V' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:128:9)
+Command           transform done; 3.85 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:36 ; elapsed = 00:05:15 . Memory (MB): peak = 1503.270 ; gain = 1099.754 ; free physical = 6611 ; free virtual = 8975
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 14.5 sec.
+Command       elaborate done; 39.02 sec.
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'compute' ...
+Execute         ap_set_top_model compute 
+Execute         get_model_list compute -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model compute 
+Execute         preproc_iomode -model reset_mem 
+Execute         get_model_list compute -filter all-wo-channel 
+INFO-FLOW: Model list for configure: reset_mem compute
+INFO-FLOW: Configuring Module : reset_mem ...
+Execute         set_default_model reset_mem 
+Execute         apply_spec_resource_limit reset_mem 
+INFO-FLOW: Configuring Module : compute ...
+Execute         set_default_model compute 
+Execute         apply_spec_resource_limit compute 
+INFO-FLOW: Model list for preprocess: reset_mem compute
+INFO-FLOW: Preprocessing Module: reset_mem ...
+Execute         set_default_model reset_mem 
+Execute         cdfg_preprocess -model reset_mem 
+Execute         rtl_gen_preprocess reset_mem 
+INFO-FLOW: Preprocessing Module: compute ...
+Execute         set_default_model compute 
+Execute         cdfg_preprocess -model compute 
+Execute         rtl_gen_preprocess compute 
+INFO-FLOW: Model list for synthesis: reset_mem compute
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'reset_mem' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model reset_mem 
+Execute         schedule -model reset_mem 
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Function contains subloop(s) not being unrolled.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 109.38 seconds; current allocated memory: 249.118 MB.
+Execute         syn_report -verbosereport -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem.verbose.sched.rpt 
+Execute         db_write -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem.sched.adb -f 
+INFO-FLOW: Finish scheduling reset_mem.
+Execute         set_default_model reset_mem 
+Execute         bind -model reset_mem 
+BIND OPTION: model=reset_mem
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 249.203 MB.
+Execute         syn_report -verbosereport -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem.verbose.bind.rpt 
+Execute         db_write -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem.bind.adb -f 
+INFO-FLOW: Finish binding reset_mem.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model compute 
+Execute         schedule -model compute 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'EXE_OUT_LOOP_EXE_IN_LOOP_READ_ALU_UOP'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 2, Depth = 9.
+INFO: [SCHED 204-61] Pipelining loop 'EXE_OUT_LOOP_EXE_IN_LOOP_READ_GEMM_UOP'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 10.
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive: Loop contains subloop(s) not being unrolled or flattened.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.acc_mem.V.addr.biases.V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 4.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.uop_mem.V.addr.uops.V'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+WARNING: [SCHED 204-21] Estimated clock period (8.48669ns) exceeds the target (target clock period: 7ns, clock uncertainty: 0.875ns, effective delay budget: 6.125ns).
+WARNING: [SCHED 204-21] The critical path in module 'compute' consists of the following:
+	'mul' operation of DSP[1081] ('mul_ln1352', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:298->/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:503) [1019]  (3.36 ns)
+	'add' operation of DSP[1081] ('add_ln700', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:299->/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:503) [1081]  (3.02 ns)
+	'add' operation ('add_ln700_2', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:299->/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:503) [1085]  (2.11 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 1.4 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.51 seconds; current allocated memory: 256.461 MB.
+Execute         syn_report -verbosereport -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.verbose.sched.rpt 
+Command         syn_report done; 0.82 sec.
+Execute         db_write -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.sched.adb -f 
+Command         db_write done; 1.44 sec.
+INFO-FLOW: Finish scheduling compute.
+Execute         set_default_model compute 
+Execute         bind -model compute 
+BIND OPTION: model=compute
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 1.02 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.28 seconds; current allocated memory: 265.644 MB.
+Execute         syn_report -verbosereport -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.verbose.bind.rpt 
+Command         syn_report done; 1.34 sec.
+Execute         db_write -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.bind.adb -f 
+Command         db_write done; 1.53 sec.
+INFO-FLOW: Finish binding compute.
+Execute         get_model_list compute -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess reset_mem 
+Execute         rtl_gen_preprocess compute 
+INFO-FLOW: Model list for RTL generation: reset_mem compute
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'reset_mem' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model reset_mem -vendor xilinx -mg_file /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'reset_mem'.
+INFO: [HLS 200-111]  Elapsed time: 2.94 seconds; current allocated memory: 266.545 MB.
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.rtl_wrap.cfg.tcl 
+Execute         gen_rtl reset_mem -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/syn/systemc/reset_mem -synmodules reset_mem compute 
+Execute         gen_rtl reset_mem -style xilinx -f -lang vhdl -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/syn/vhdl/reset_mem 
+Execute         gen_rtl reset_mem -style xilinx -f -lang vlog -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/syn/verilog/reset_mem 
+Execute         syn_report -csynth -model reset_mem -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/syn/report/reset_mem_csynth.rpt 
+Execute         syn_report -rtlxml -model reset_mem -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/syn/report/reset_mem_csynth.xml 
+Execute         syn_report -verbosereport -model reset_mem -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem.verbose.rpt 
+Execute         db_write -model reset_mem -f -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem.adb 
+Execute         gen_tb_info reset_mem -p /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model compute -vendor xilinx -mg_file /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'compute/uop_port' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'compute/data_port' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'compute/done' to 's_axilite & ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'compute/uops_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'compute/biases_V' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'compute/gemm_queue_V_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'compute/l2g_dep_queue_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'compute/s2g_dep_queue_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'compute/g2l_dep_queue_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'compute/g2s_dep_queue_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'compute/inp_mem_V' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'compute/wgt_mem_0_V' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'compute/wgt_mem_1_V' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'compute/out_mem_V' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'compute' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'done', 'uops_V' and 'biases_V' to AXI-Lite port CONTROL_BUS.
+INFO: [SYN 201-210] Renamed object name 'compute_mul_32ns_14ns_46_3_1' to 'compute_mul_32ns_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'compute_mul_46ns_14ns_60_5_1' to 'compute_mul_46ns_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'compute_mul_14ns_32ns_46_3_1' to 'compute_mul_14ns_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'compute_mul_14ns_46ns_60_5_1' to 'compute_mul_14ns_eOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'compute_mac_muladd_8s_8s_16s_17_1_1' to 'compute_mac_muladfYi' due to the length limit 20
+WARNING: [RTGEN 206-101] Setting dangling out port 'compute/inp_mem_V_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'compute/inp_mem_V_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'compute/wgt_mem_0_V_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'compute/wgt_mem_0_V_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'compute/wgt_mem_1_V_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'compute/wgt_mem_1_V_Din_A' to 0.
+INFO: [RTGEN 206-100] Generating core module 'compute_mac_muladfYi': 128 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'compute_mul_14ns_dEe': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'compute_mul_14ns_eOg': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'compute_mul_32ns_bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'compute_mul_46ns_cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compute'.
+Command         create_rtl_model done; 1.01 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.31 seconds; current allocated memory: 283.354 MB.
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.rtl_wrap.cfg.tcl 
+Execute         gen_rtl compute -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/syn/systemc/compute -synmodules reset_mem compute 
+Execute         gen_rtl compute -istop -style xilinx -f -lang vhdl -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/syn/vhdl/compute 
+Command         gen_rtl done; 0.48 sec.
+Execute         gen_rtl compute -istop -style xilinx -f -lang vlog -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/syn/verilog/compute 
+Command         gen_rtl done; 0.25 sec.
+Execute         syn_report -csynth -model compute -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/syn/report/compute_csynth.rpt 
+Command         syn_report done; 0.24 sec.
+Execute         syn_report -rtlxml -model compute -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/syn/report/compute_csynth.xml 
+Command         syn_report done; 0.22 sec.
+Execute         syn_report -verbosereport -model compute -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.verbose.rpt 
+Command         syn_report done; 1.57 sec.
+Execute         db_write -model compute -f -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.adb 
+Command         db_write done; 3.03 sec.
+Execute         gen_tb_info compute -p /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute 
+Execute         export_constraint_db -f -tool general -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.constraint.tcl 
+Execute         syn_report -designview -model compute -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.design.xml 
+Command         syn_report done; 0.44 sec.
+Execute         get_config_rtl -disable_wave_debug 
+Execute         syn_report -wcfg -model compute -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model compute -o /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.protoinst 
+Execute         get_config_debug -directory 
+Execute         sc_get_clocks compute 
+Execute         get_config_export -vivado_clock 
+Execute         sc_get_portdomain compute 
+INFO-FLOW: Model list for RTL component generation: reset_mem compute
+INFO-FLOW: Handling components in module [reset_mem] ... 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem.compgen.tcl 
+INFO-FLOW: Handling components in module [compute] ... 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.compgen.tcl 
+INFO-FLOW: Found component compute_mul_32ns_bkb.
+INFO-FLOW: Append model compute_mul_32ns_bkb
+INFO-FLOW: Found component compute_mul_46ns_cud.
+INFO-FLOW: Append model compute_mul_46ns_cud
+INFO-FLOW: Found component compute_mul_14ns_dEe.
+INFO-FLOW: Append model compute_mul_14ns_dEe
+INFO-FLOW: Found component compute_mul_14ns_eOg.
+INFO-FLOW: Append model compute_mul_14ns_eOg
+INFO-FLOW: Found component compute_mac_muladfYi.
+INFO-FLOW: Append model compute_mac_muladfYi
+INFO-FLOW: Found component compute_uop_mem_V.
+INFO-FLOW: Append model compute_uop_mem_V
+INFO-FLOW: Found component compute_acc_mem_V.
+INFO-FLOW: Append model compute_acc_mem_V
+INFO-FLOW: Found component compute_CONTROL_BUS_s_axi.
+INFO-FLOW: Append model compute_CONTROL_BUS_s_axi
+INFO-FLOW: Found component compute_uop_port_m_axi.
+INFO-FLOW: Append model compute_uop_port_m_axi
+INFO-FLOW: Found component compute_data_port_m_axi.
+INFO-FLOW: Append model compute_data_port_m_axi
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Append model reset_mem
+INFO-FLOW: Append model compute
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: compute_mul_32ns_bkb compute_mul_46ns_cud compute_mul_14ns_dEe compute_mul_14ns_eOg compute_mac_muladfYi compute_uop_mem_V compute_acc_mem_V compute_CONTROL_BUS_s_axi compute_uop_port_m_axi compute_data_port_m_axi regslice_core reset_mem compute
+INFO-FLOW: To file: write model compute_mul_32ns_bkb
+INFO-FLOW: To file: write model compute_mul_46ns_cud
+INFO-FLOW: To file: write model compute_mul_14ns_dEe
+INFO-FLOW: To file: write model compute_mul_14ns_eOg
+INFO-FLOW: To file: write model compute_mac_muladfYi
+INFO-FLOW: To file: write model compute_uop_mem_V
+INFO-FLOW: To file: write model compute_acc_mem_V
+INFO-FLOW: To file: write model compute_CONTROL_BUS_s_axi
+INFO-FLOW: To file: write model compute_uop_port_m_axi
+INFO-FLOW: To file: write model compute_data_port_m_axi
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model reset_mem
+INFO-FLOW: To file: write model compute
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute         syn_report -model compute -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 117.83 MHz
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/common.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/op.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.24 sec.
+Command         ap_source done; 0.24 sec.
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem.compgen.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'compute_mul_32ns_bkb_MulnS_0'
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'compute_mul_46ns_cud_MulnS_1'
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'compute_mul_14ns_dEe_MulnS_2'
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'compute_mul_14ns_eOg_MulnS_3'
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info 
+INFO: [RTMG 210-278] Implementing memory 'compute_uop_mem_V_ram (RAM)' using block RAMs with power-on initialization.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'compute_acc_mem_V_ram (RAM)' using block RAMs with power-on initialization.
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           source ./CONTROL_BUS.slave.tcl 
+Execute           is_m_axi_addr64 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Command         ap_source done; 0.79 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/common.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/op.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.24 sec.
+Command         ap_source done; 0.25 sec.
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=compute xml_exists=0
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.rtl_wrap.cfg.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.rtl_wrap.cfg.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.rtl_wrap.cfg.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem.compgen.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem.compgen.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem.compgen.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.constraint.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=10
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=14
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=13 #gSsdmPorts=10
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute         get_config_export -xo 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.compgen.dataonly.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.compgen.dataonly.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute         get_config_sdx -target 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.rtl_wrap.cfg.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.compgen.dataonly.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.constraint.tcl 
+Execute         sc_get_clocks compute 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute         get_config_debug -directory 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem.tbgen.tcl 
+Execute         source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute         get_config_sdx -target 
+Execute         get_config_sdx -profile 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -stall_sig_gen 
+Execute         get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:47 ; elapsed = 00:05:52 . Memory (MB): peak = 1503.270 ; gain = 1099.754 ; free physical = 6504 ; free virtual = 8875
+INFO: [VHDL 208-304] Generating VHDL RTL for compute.
+INFO: [VLOG 209-307] Generating Verilog RTL for compute.
+Command       autosyn done; 37.52 sec.
+Command     csynth_design done; 76.62 sec.
+Execute     export_design -format ip_catalog 
+Execute       get_config_export -acc 
+Execute       get_config_export -clock_margin 
+Execute       get_config_export -custom_script 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       get_config_export -driver_input_dir 
+Execute       get_config_export -ipname 
+Execute       get_config_export -kernel_drc 
+Execute       get_config_export -library 
+Execute       get_config_export -qor_test 
+Execute       get_config_export -rtl 
+Execute       get_config_export -sdaccel 
+Execute       get_config_export -sim 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -use_ip 
+Execute       get_config_export -use_netlist 
+Execute       get_config_export -vendor 
+Execute       get_config_export -version 
+Execute       get_config_export -xo 
+Execute       config_export -format=ip_catalog 
+INFO-FLOW: DBG:CMD: export_design_wrap: -format ip_catalog
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -vivado_clock 
+Execute       get_top 
+Execute       get_config_sdx -target 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -target 
+INFO-FLOW: DBG:CMD:   auto_impl: pack: -export -tool vivado -sdx-target none
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.25 sec.
+Command       ap_source done; 0.26 sec.
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: automg_wrap -export -pcore_version 1.00.a -rtl both -sdx-target none -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:CMD:     auto_generate -export -pcore_version 1.00.a -rtl both -sdx-target none -tool Vivado -impltomg_flag
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.25 sec.
+Command       ap_source done; 0.25 sec.
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem.compgen.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem.compgen.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/reset_mem.compgen.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.compgen.tcl 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.constraint.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=10
+INFO-FLOW: DBG:CMD:       copying IP vlog from /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/impl/verilog
+INFO-FLOW: DBG:CMD:       copying IP vhdl from /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/impl/vhdl
+INFO-FLOW: DBG:CMD:       copy ip_driver_dir 1_0 /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/driver
+INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=10
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.compgen.dataonly.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.compgen.dataonly.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_debug -directory 
+INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=compute
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.rtl_wrap.cfg.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.rtl_wrap.cfg.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.rtl_wrap.cfg.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_top_info
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=compute
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.rtl_wrap.cfg.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.rtl_wrap.cfg.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.rtl_wrap.cfg.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_bd_script
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.constraint.tcl 
+INFO-FLOW: DBG:CMD:       generate_ipi_example_script
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_syn_sh
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_imp_constraints
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.constraint.tcl 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/compute.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO-FLOW: DBG:CMD: read_platform_lib /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.2 sec.
+Command       ap_source done; 0.21 sec.
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       ap_part_info -name xc7z020-clg484-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info -quiet 
+INFO-FLOW: DBG:CMD:     exec /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_compute/soln/impl/ip/pack.sh
+Command     export_design done; 69.16 sec.
+Execute     close_project 
+Execute     open_project vta_store 
+INFO: [HLS 200-10] Creating and opening project '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_store'.
+Execute     set_top store 
+Execute     add_files /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc -cflags -I/mnt/e/_AI/tvm/include -I/mnt/e/_AI/tvm/3rdparty/vta-hw/include -I/mnt/e/_AI/tvm/3rdparty/dlpack/include -I/mnt/e/_AI/tvm/3rdparty/dmlc-core/include -DVTA_TARGET=sim -DVTA_HW_VER=0.0.2 -DVTA_LOG_INP_WIDTH=3 -DVTA_LOG_WGT_WIDTH=3 -DVTA_LOG_ACC_WIDTH=5 -DVTA_LOG_BATCH=0 -DVTA_LOG_BLOCK=4 -DVTA_LOG_UOP_BUFF_SIZE=15 -DVTA_LOG_INP_BUFF_SIZE=15 -DVTA_LOG_WGT_BUFF_SIZE=18 -DVTA_LOG_ACC_BUFF_SIZE=17 -DVTA_LOG_BLOCK_IN=4 -DVTA_LOG_BLOCK_OUT=4 -DVTA_LOG_OUT_WIDTH=3 -DVTA_LOG_OUT_BUFF_SIZE=15 -DVTA_LOG_BUS_WIDTH=6 -DVTA_IP_REG_MAP_RANGE=0x1000 -DVTA_FETCH_ADDR=0x43C00000 -DVTA_LOAD_ADDR=0x43C01000 -DVTA_COMPUTE_ADDR=0x43C02000 -DVTA_STORE_ADDR=0x43C03000 -DVTA_FETCH_INSN_COUNT_OFFSET=16 -DVTA_FETCH_INSN_ADDR_OFFSET=24 -DVTA_LOAD_INP_ADDR_OFFSET=16 -DVTA_LOAD_WGT_ADDR_OFFSET=24 -DVTA_COMPUTE_DONE_WR_OFFSET=16 -DVTA_COMPUTE_DONE_RD_OFFSET=24 -DVTA_COMPUTE_UOP_ADDR_OFFSET=32 -DVTA_COMPUTE_BIAS_ADDR_OFFSET=40 -DVTA_STORE_OUT_ADDR_OFFSET=16 -DVTA_COHERENT_ACCESSES=true 
+INFO: [HLS 200-10] Adding design file '/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc' to the project
+Execute       is_xip /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc 
+Execute     open_solution soln 
+Execute       cleanup_all 
+Execute       cleanup_all 

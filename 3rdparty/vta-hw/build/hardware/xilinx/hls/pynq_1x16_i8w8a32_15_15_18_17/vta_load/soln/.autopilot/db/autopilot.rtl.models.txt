@@ -1,0 +1,6 @@
+load_mul_16s_4ns_bkb
+load_CONTROL_BUS_s_axi
+load_data_port_m_axi
+regslice_core
+reset_mem
+load

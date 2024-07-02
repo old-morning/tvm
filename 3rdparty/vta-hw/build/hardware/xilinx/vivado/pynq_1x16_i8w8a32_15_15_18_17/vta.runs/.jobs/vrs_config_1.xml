@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="vta_axi_smc0_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_axi_smc0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vta_pll_clk_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_pll_clk_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vta_l2g_queue_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_l2g_queue_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vta_s2g_queue_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_s2g_queue_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="vta_l2g_queue_0_synth_1"/>
+	</Run>
+	<Run Id="vta_g2l_queue_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_g2l_queue_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="vta_l2g_queue_0_synth_1"/>
+	</Run>
+	<Run Id="vta_store_queue_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_store_queue_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vta_inp_mem_0_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_inp_mem_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vta_wgt_mem_0_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_wgt_mem_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vta_g2s_queue_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_g2s_queue_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="vta_l2g_queue_0_synth_1"/>
+	</Run>
+	<Run Id="vta_fetch_0_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_fetch_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vta_processing_system_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_processing_system_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vta_wgt_mem_1_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_wgt_mem_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="vta_wgt_mem_0_0_synth_1"/>
+	</Run>
+	<Run Id="vta_out_mem_0_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_out_mem_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="vta_inp_mem_0_0_synth_1"/>
+	</Run>
+	<Run Id="vta_gemm_queue_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_gemm_queue_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="vta_store_queue_0_synth_1"/>
+	</Run>
+	<Run Id="vta_load_0_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_load_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vta_load_queue_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_load_queue_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="vta_store_queue_0_synth_1"/>
+	</Run>
+	<Run Id="vta_proc_sys_reset_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_proc_sys_reset_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vta_store_0_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_store_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vta_compute_0_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_compute_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vta_xbar_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vta_auto_pc_0_synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="vta_axi_smc0_0_synth_1"/>
+		<Parent Id="vta_pll_clk_0_synth_1"/>
+		<Parent Id="vta_l2g_queue_0_synth_1"/>
+		<Parent Id="vta_s2g_queue_0_synth_1"/>
+		<Parent Id="vta_g2l_queue_0_synth_1"/>
+		<Parent Id="vta_store_queue_0_synth_1"/>
+		<Parent Id="vta_inp_mem_0_0_synth_1"/>
+		<Parent Id="vta_wgt_mem_0_0_synth_1"/>
+		<Parent Id="vta_g2s_queue_0_synth_1"/>
+		<Parent Id="vta_fetch_0_0_synth_1"/>
+		<Parent Id="vta_processing_system_0_synth_1"/>
+		<Parent Id="vta_wgt_mem_1_0_synth_1"/>
+		<Parent Id="vta_out_mem_0_0_synth_1"/>
+		<Parent Id="vta_gemm_queue_0_synth_1"/>
+		<Parent Id="vta_load_0_0_synth_1"/>
+		<Parent Id="vta_load_queue_0_synth_1"/>
+		<Parent Id="vta_proc_sys_reset_0_synth_1"/>
+		<Parent Id="vta_store_0_0_synth_1"/>
+		<Parent Id="vta_compute_0_0_synth_1"/>
+		<Parent Id="vta_xbar_0_synth_1"/>
+		<Parent Id="vta_auto_pc_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="vta_axi_smc0_0_synth_1"/>
+		<Parent Id="vta_pll_clk_0_synth_1"/>
+		<Parent Id="vta_l2g_queue_0_synth_1"/>
+		<Parent Id="vta_s2g_queue_0_synth_1"/>
+		<Parent Id="vta_g2l_queue_0_synth_1"/>
+		<Parent Id="vta_store_queue_0_synth_1"/>
+		<Parent Id="vta_inp_mem_0_0_synth_1"/>
+		<Parent Id="vta_wgt_mem_0_0_synth_1"/>
+		<Parent Id="vta_g2s_queue_0_synth_1"/>
+		<Parent Id="vta_fetch_0_0_synth_1"/>
+		<Parent Id="vta_processing_system_0_synth_1"/>
+		<Parent Id="vta_wgt_mem_1_0_synth_1"/>
+		<Parent Id="vta_out_mem_0_0_synth_1"/>
+		<Parent Id="vta_gemm_queue_0_synth_1"/>
+		<Parent Id="vta_load_0_0_synth_1"/>
+		<Parent Id="vta_load_queue_0_synth_1"/>
+		<Parent Id="vta_proc_sys_reset_0_synth_1"/>
+		<Parent Id="vta_store_0_0_synth_1"/>
+		<Parent Id="vta_compute_0_0_synth_1"/>
+		<Parent Id="vta_xbar_0_synth_1"/>
+		<Parent Id="vta_auto_pc_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

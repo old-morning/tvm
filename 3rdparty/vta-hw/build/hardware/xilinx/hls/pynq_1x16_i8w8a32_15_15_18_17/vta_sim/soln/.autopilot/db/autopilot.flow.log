@@ -1,0 +1,430 @@
+INFO-FLOW: Workspace /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/pynq_1x16_i8w8a32_15_15_18_17/vta_sim/soln opened at Thu Jun 20 10:50:19 CST 2024
+Execute     set_part xc7z020clg484-1 
+Execute       ap_part_info -name xc7z020clg484-1 -data single -quiet 
+Command       ap_part_info done; 4.6 sec.
+Execute       ap_part_info -name xc7z020clg484-1 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg484:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Command         import_lib done; 0.24 sec.
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.11 sec.
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.35 sec.
+Command         ap_source done; 0.35 sec.
+Execute         ap_part_info -data single -name xc7z020-clg484-1 
+Execute         ap_part_info -name xc7z020-clg484-1 -data resources 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.66 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Command       add_library done; 0.13 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 5.48 sec.
+Execute     create_clock -period 7 -name default 
+Execute       config_clock -quiet -name default -period 7 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+Execute     set_directive_array_reshape -type block -factor 2 -dim 2 load inp_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+Execute     set_directive_array_reshape -type block -factor 2 -dim 2 compute inp_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+Execute     set_directive_array_reshape -type block -factor 16 -dim 2 load wgt_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+Execute     set_directive_array_reshape -type block -factor 16 -dim 2 compute wgt_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+Execute     set_directive_array_partition -type block -factor 2 -dim 2 load wgt_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+Execute     set_directive_array_partition -type block -factor 2 -dim 2 compute wgt_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+Execute     set_directive_array_reshape -type block -factor 2 -dim 2 compute out_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredout_mem block=positionBoolean0type factor=2 dim=2 
+Execute     set_directive_array_reshape -type block -factor 2 -dim 2 store out_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredout_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredout_mem block=positionBoolean0type factor=2 dim=2 
+Execute     csim_design -clean 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       is_encrypted /mnt/e/_AI/tvm/3rdparty/vta-hw/tests/hardware/common/test_lib.cc 
+Execute       is_xip /mnt/e/_AI/tvm/3rdparty/vta-hw/tests/hardware/common/test_lib.cc 
+Execute       is_encrypted /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/sim/vta_test.cc 
+Execute       is_xip /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/sim/vta_test.cc 
+Execute       is_encrypted /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/src/vta.cc 
+Execute       is_xip /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/src/vta.cc 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; error code: 2; 9.1 sec.
+Command   ap_source done; error code: 1; 14.92 sec.
+Execute   cleanup_all 
+INFO-FLOW: Workspace /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/pynq_1x16_i8w8a32_15_15_18_17/vta_sim/soln opened at Thu Jun 20 10:50:59 CST 2024
+Execute       config_clock -quiet -name default -period 7 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 7ns.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.lib 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.lib 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.lib 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Command       import_lib done; 0.24 sec.
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.28 sec.
+Command       ap_source done; 0.29 sec.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       set_part xc7z020-clg484-1 
+Execute         ap_part_info -name xc7z020-clg484-1 -data single -quiet 
+Command         ap_part_info done; 4.47 sec.
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         add_library xilinx/zynq/zynq:xc7z020:-clg484:-1 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.lib 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.lib 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.lib 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.lib 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Command           import_lib done; 0.22 sec.
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command             ap_source done; 0.28 sec.
+Command           ap_source done; 0.28 sec.
+Execute           ap_part_info -data single -name xc7z020-clg484-1 
+Execute           ap_part_info -name xc7z020-clg484-1 -data resources 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info 
+Execute           config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute           ap_part_info -name xc7z020-clg484-1 -data info 
+Execute           config_chip_info -quiet -speed slow 
+Command         add_library done; 0.56 sec.
+Execute         add_library xilinx/zynq/zynq_fpv6 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                   source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                   source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Command         add_library done; 0.13 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         get_default_platform 
+Command       set_part done; 5.25 sec.
+Execute       ap_part_info -data single -name xc7z020-clg484-1 
+Execute       ap_part_info -name xc7z020-clg484-1 -data resources 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       config_chip_info -quiet -speed slow 
+Command     open_solution done; 6.05 sec.
+Execute     set_part xc7z020clg484-1 
+Execute       ap_part_info -name xc7z020clg484-1 -data single -quiet 
+Execute       ap_part_info -name xc7z020clg484-1 -data info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg484:-1 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.lib 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Command         import_lib done; 0.14 sec.
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.24 sec.
+Command         ap_source done; 0.25 sec.
+Execute         ap_part_info -data single -name xc7z020-clg484-1 
+Execute         ap_part_info -name xc7z020-clg484-1 -data resources 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg484-1 -data info 
+Execute         config_chip_info -quiet -speed slow 
+Command       add_library done; 0.44 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /mnt/e/_AI/tools/Xilinx/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.6 sec.
+Execute     create_clock -period 7 -name default 
+Execute     set_directive_array_reshape -type block -factor 2 -dim 2 load inp_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+Execute     set_directive_array_reshape -type block -factor 2 -dim 2 compute inp_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+Execute     set_directive_array_reshape -type block -factor 16 -dim 2 load wgt_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+Execute     set_directive_array_reshape -type block -factor 16 -dim 2 compute wgt_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+Execute     set_directive_array_partition -type block -factor 2 -dim 2 load wgt_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+Execute     set_directive_array_partition -type block -factor 2 -dim 2 compute wgt_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+Execute     set_directive_array_reshape -type block -factor 2 -dim 2 compute out_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredout_mem block=positionBoolean0type factor=2 dim=2 
+Execute     set_directive_array_reshape -type block -factor 2 -dim 2 store out_mem 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredinp_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=16 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_PARTITION' partition=positionBooleanCmd variable=positionBooleanTextRequiredwgt_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredout_mem block=positionBoolean0type factor=2 dim=2 
+INFO-FLOW: Setting directive 'ARRAY_RESHAPE' reshape=positionBooleanCmd variable=positionBooleanTextRequiredout_mem block=positionBoolean0type factor=2 dim=2 
+Execute     csim_design -clean 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       is_encrypted /mnt/e/_AI/tvm/3rdparty/vta-hw/tests/hardware/common/test_lib.cc 
+Execute       is_xip /mnt/e/_AI/tvm/3rdparty/vta-hw/tests/hardware/common/test_lib.cc 
+Execute       is_encrypted /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/sim/vta_test.cc 
+Execute       is_xip /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/sim/vta_test.cc 
+Execute       is_encrypted /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/src/vta.cc 
+Execute       is_xip /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/src/vta.cc 
+Execute       ap_part_info -name xc7z020-clg484-1 -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 16.51 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 70.76 sec.
+Execute     close_project 
+Execute     open_project vta_fetch 
+INFO: [HLS 200-10] Creating and opening project '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/pynq_1x16_i8w8a32_15_15_18_17/vta_fetch'.
+Execute     set_top fetch 
+Execute     add_files /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc -cflags -I/mnt/e/_AI/tvm/include -I/mnt/e/_AI/tvm/3rdparty/vta-hw/include -I/mnt/e/_AI/tvm/3rdparty/dlpack/include -I/mnt/e/_AI/tvm/3rdparty/dmlc-core/include -DVTA_TARGET=sim -DVTA_HW_VER=0.0.2 -DVTA_LOG_INP_WIDTH=3 -DVTA_LOG_WGT_WIDTH=3 -DVTA_LOG_ACC_WIDTH=5 -DVTA_LOG_BATCH=0 -DVTA_LOG_BLOCK=4 -DVTA_LOG_UOP_BUFF_SIZE=15 -DVTA_LOG_INP_BUFF_SIZE=15 -DVTA_LOG_WGT_BUFF_SIZE=18 -DVTA_LOG_ACC_BUFF_SIZE=17 -DVTA_LOG_BLOCK_IN=4 -DVTA_LOG_BLOCK_OUT=4 -DVTA_LOG_OUT_WIDTH=3 -DVTA_LOG_OUT_BUFF_SIZE=15 -DVTA_LOG_BUS_WIDTH=6 -DVTA_IP_REG_MAP_RANGE=0x1000 -DVTA_FETCH_ADDR=0x43C00000 -DVTA_LOAD_ADDR=0x43C01000 -DVTA_COMPUTE_ADDR=0x43C02000 -DVTA_STORE_ADDR=0x43C03000 -DVTA_FETCH_INSN_COUNT_OFFSET=16 -DVTA_FETCH_INSN_ADDR_OFFSET=24 -DVTA_LOAD_INP_ADDR_OFFSET=16 -DVTA_LOAD_WGT_ADDR_OFFSET=24 -DVTA_COMPUTE_DONE_WR_OFFSET=16 -DVTA_COMPUTE_DONE_RD_OFFSET=24 -DVTA_COMPUTE_UOP_ADDR_OFFSET=32 -DVTA_COMPUTE_BIAS_ADDR_OFFSET=40 -DVTA_STORE_OUT_ADDR_OFFSET=16 -DVTA_COHERENT_ACCESSES=true 
+INFO: [HLS 200-10] Adding design file '/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc' to the project
+Execute       is_xip /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc 
+Execute     open_solution soln 
+Execute       cleanup_all 
+Execute       cleanup_all 

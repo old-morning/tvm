@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Jun 20 10:11:07 2024
+# Process ID: 3034
+# Current directory: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_fetch/soln/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_fetch/soln/impl/ip/vivado.log
+# Journal file: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/sim_1x16_i8w8a32_15_15_18_17/vta_fetch/soln/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/mnt/e/_AI/tools/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 20 10:11:45 2024...

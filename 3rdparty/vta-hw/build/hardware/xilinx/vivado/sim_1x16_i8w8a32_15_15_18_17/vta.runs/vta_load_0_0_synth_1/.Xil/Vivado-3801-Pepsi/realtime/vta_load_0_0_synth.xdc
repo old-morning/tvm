@@ -1,0 +1,6 @@
+set_property SRC_FILE_INFO {cfile:/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/sim_1x16_i8w8a32_15_15_18_17/vta.srcs/sources_1/bd/vta/ip/vta_load_0_0/constraints/load_ooc.xdc rfile:../../../../../vta.srcs/sources_1/bd/vta/ip/vta_load_0_0/constraints/load_ooc.xdc id:1 order:EARLY scoped_inst:inst} [current_design]
+set_property SRC_FILE_INFO {cfile:/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/sim_1x16_i8w8a32_15_15_18_17/vta.runs/vta_load_0_0_synth_1/dont_touch.xdc rfile:../../../dont_touch.xdc id:2} [current_design]
+set_property src_info {type:SCOPED_XDC file:1 line:5 export:INPUT save:INPUT read:FILTER_OUT_OF_CONTEXT} [current_design]
+create_clock -period 7.000 -name ap_clk [get_ports ap_clk]
+set_property src_info {type:XDC file:2 line:9 export:INPUT save:INPUT read:READ} [current_design]
+set_property DONT_TOUCH true [get_cells inst]

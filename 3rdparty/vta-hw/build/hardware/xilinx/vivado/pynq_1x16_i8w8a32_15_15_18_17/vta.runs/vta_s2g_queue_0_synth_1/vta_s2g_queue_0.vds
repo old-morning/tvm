@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Jun 20 14:06:23 2024
+# Process ID: 19029
+# Current directory: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_s2g_queue_0_synth_1
+# Command line: vivado -log vta_s2g_queue_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vta_s2g_queue_0.tcl
+# Log file: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_s2g_queue_0_synth_1/vta_s2g_queue_0.vds
+# Journal file: /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/vta.runs/vta_s2g_queue_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source vta_s2g_queue_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/mnt/e/_AI/tools/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:compute:1.0'. The one found in IP location '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib/xilinx_com_hls_compute_1_0' will take precedence over the same IP in location /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib/xilinx_com_hls_compute_1_0_1
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:fetch:1.0'. The one found in IP location '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib/xilinx_com_hls_fetch_1_0' will take precedence over the same IP in location /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib/xilinx_com_hls_fetch_1_0_1
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:load:1.0'. The one found in IP location '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib/xilinx_com_hls_load_1_0' will take precedence over the same IP in location /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib/xilinx_com_hls_load_1_0_1
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:store:1.0'. The one found in IP location '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib/xilinx_com_hls_store_1_0' will take precedence over the same IP in location /mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/pynq_1x16_i8w8a32_15_15_18_17/ip_lib/xilinx_com_hls_store_1_0_1
+update_ip_catalog: Time (s): cpu = 00:00:00.81 ; elapsed = 00:00:18 . Memory (MB): peak = 2070.840 ; gain = 0.000 ; free physical = 3771 ; free virtual = 5525
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP vta_s2g_queue_0, cache-ID = 994bdcc3fa07273e.
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 20 14:07:24 2024...

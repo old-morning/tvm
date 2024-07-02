@@ -1,0 +1,7 @@
+create_clock -period 7.000 [get_ports -no_traverse {inp_mem_V_Clk_A wgt_mem_0_V_Clk_A wgt_mem_1_V_Clk_A}]
+create_clock -period 7.000 [get_ports {}]
+set_property -quiet CLOCK_PERIOD_OOC_TARGET 7.000 [get_ports -no_traverse -quiet ap_clk]
+set_property -quiet CLOCK_PERIOD_OOC_TARGET 7.000 [get_ports -no_traverse -quiet inp_mem_V_Clk_A]
+set_property -quiet CLOCK_PERIOD_OOC_TARGET 7.000 [get_ports -no_traverse -quiet wgt_mem_0_V_Clk_A]
+set_property -quiet CLOCK_PERIOD_OOC_TARGET 7.000 [get_ports -no_traverse -quiet wgt_mem_1_V_Clk_A]
+set_property -quiet IS_IP_OOC_CELL TRUE [get_cells -of [get_ports -no_traverse -quiet ap_clk]]

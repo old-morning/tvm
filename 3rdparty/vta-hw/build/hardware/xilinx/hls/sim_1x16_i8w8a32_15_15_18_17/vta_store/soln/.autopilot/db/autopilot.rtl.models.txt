@@ -1,0 +1,4 @@
+store_CONTROL_BUS_s_axi
+store_data_port_m_axi
+regslice_core
+store

@@ -1,0 +1,13 @@
+compute_mul_32ns_bkb
+compute_mul_46ns_cud
+compute_mul_14ns_dEe
+compute_mul_14ns_eOg
+compute_mac_muladfYi
+compute_uop_mem_V
+compute_acc_mem_V
+compute_CONTROL_BUS_s_axi
+compute_uop_port_m_axi
+compute_data_port_m_axi
+regslice_core
+reset_mem
+compute

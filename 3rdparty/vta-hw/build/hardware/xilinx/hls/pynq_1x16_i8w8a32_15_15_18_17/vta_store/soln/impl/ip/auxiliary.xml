@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="store" xd:componentRef="store" xd:initiationInterval="x" xd:clockPeriod="7.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_CONTROL_BUS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="*(outputs)" xd:originalName="outputs" xd:direction="inout" xd:interfaceRef="m_axi_data_port" xd:busTypeRef="aximm" xd:dataWidth="64" xd:bufferDirection="out"/>
+  <xd:arg xd:name="outputs_V" xd:originalName="outputs_V" xd:direction="in" xd:interfaceRef="s_axi_CONTROL_BUS" xd:busTypeRef="axilite" xd:aximmInterfaceRef="m_axi_data_port" xd:dataWidth="32" xd:offset="0x10" xd:handshakeRef="ap_none"/>
+  <xd:arg xd:name="store_queue" xd:originalName="store_queue" xd:direction="in" xd:interfaceRef="store_queue_V_V" xd:busTypeRef="axis" xd:dataWidth="128"/>
+  <xd:arg xd:name="g2s_dep_queue" xd:originalName="g2s_dep_queue" xd:direction="in" xd:interfaceRef="g2s_dep_queue_V" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="s2g_dep_queue" xd:originalName="s2g_dep_queue" xd:direction="out" xd:interfaceRef="s2g_dep_queue_V" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="out_mem[][0]" xd:originalName="out_mem0" xd:direction="in" xd:interfaceRef="out_mem_V_PORTA" xd:busTypeRef="bram" xd:firstOut="1" xd:dataPack="true" xd:bitMapping="63:0" xd:arraySize="2048" xd:dataWidth="64"/>
+  <xd:arg xd:name="out_mem[][1]" xd:originalName="out_mem1" xd:direction="in" xd:interfaceRef="out_mem_V_PORTA" xd:busTypeRef="bram" xd:firstOut="1" xd:dataPack="true" xd:bitMapping="127:64" xd:arraySize="2048" xd:dataWidth="64"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="2465" xd:FF="1481" xd:BRAM="4" xd:DSP="0"/>
+</xd:acceleratorMap>

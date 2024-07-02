@@ -1,0 +1,67 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+make[1]: Entering directory '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/pynq_1x16_i8w8a32_15_15_18_17/vta_sim/soln/csim/build'
+   Compiling ../../../../../../../../../tests/hardware/common/test_lib.cc in debug mode
+   Compiling ../../../../../../../../../hardware/xilinx/sim/vta_test.cc in debug mode
+   Compiling ../../../../../../../../../hardware/xilinx/src/vta.cc in debug mode
+   Generating csim.exe
+make[1]: Leaving directory '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/hls/pynq_1x16_i8w8a32_15_15_18_17/vta_sim/soln/csim/build'
+=====================================================================================
+INFO - ALU test of min imm: batch=16, vector_size=128, uop_compression=1
+INFO - ALU test successful!
+=====================================================================================
+INFO - ALU test of min imm: batch=16, vector_size=128, uop_compression=0
+INFO - ALU test successful!
+=====================================================================================
+INFO - ALU test of max imm: batch=16, vector_size=128, uop_compression=1
+INFO - ALU test successful!
+=====================================================================================
+INFO - ALU test of max imm: batch=16, vector_size=128, uop_compression=0
+INFO - ALU test successful!
+=====================================================================================
+INFO - ALU test of add imm: batch=16, vector_size=128, uop_compression=1
+INFO - ALU test successful!
+=====================================================================================
+INFO - ALU test of add imm: batch=16, vector_size=128, uop_compression=0
+INFO - ALU test successful!
+=====================================================================================
+INFO - ALU test of shr: batch=16, vector_size=128, uop_compression=1
+INFO - ALU test successful!
+=====================================================================================
+INFO - ALU test of shr: batch=16, vector_size=128, uop_compression=0
+INFO - ALU test successful!
+=====================================================================================
+INFO - ALU test of min: batch=16, vector_size=128, uop_compression=1
+INFO - ALU test successful!
+=====================================================================================
+INFO - ALU test of min: batch=16, vector_size=128, uop_compression=0
+INFO - ALU test successful!
+=====================================================================================
+INFO - ALU test of max: batch=16, vector_size=128, uop_compression=1
+INFO - ALU test successful!
+=====================================================================================
+INFO - ALU test of max: batch=16, vector_size=128, uop_compression=0
+INFO - ALU test successful!
+=====================================================================================
+INFO - ALU test of add: batch=16, vector_size=128, uop_compression=1
+INFO - ALU test successful!
+=====================================================================================
+INFO - ALU test of add: batch=16, vector_size=128, uop_compression=0
+INFO - ALU test successful!
+=====================================================================================
+INFO - ALU test of shr: batch=16, vector_size=128, uop_compression=1
+INFO - ALU test successful!
+=====================================================================================
+INFO - ALU test of shr: batch=16, vector_size=128, uop_compression=0
+INFO - ALU test successful!
+=====================================================================================
+INFO - Blocked GEMM test: batch=256, channels=256, block=64, uop_comp=0, vt=2
+INFO - Blocked GEMM test successful!
+=====================================================================================
+INFO - Blocked GEMM test: batch=256, channels=256, block=64, uop_comp=0, vt=1
+INFO - Blocked GEMM test successful!
+=====================================================================================
+INFO - Blocked GEMM test: batch=4, in_channels=64, out_channels=64, uop_comp=0
+INFO - Blocked GEMM test successful!
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

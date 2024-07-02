@@ -1,0 +1,278 @@
+
+
+================================================================
+== Vivado HLS Report for 'fetch'
+================================================================
+* Date:           Thu Jun 20 10:52:46 2024
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        vta_fetch
+* Solution:       soln
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 7.00 ns | 6.125 ns |   0.88 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- INSN_DECODE  |        ?|        ?|         5|          1|          1|     ?|    yes   |
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 14
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 5, States = { 9 10 11 12 13 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 14 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 9 
+14 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 15 [1/1] (1.00ns)   --->   "%insns_V_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %insns_V)"   --->   Operation 15 'read' 'insns_V_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 16 [1/1] (1.00ns)   --->   "%insn_count_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %insn_count)"   --->   Operation 16 'read' 'insn_count_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%insns_V1 = call i28 @_ssdm_op_PartSelect.i28.i32.i32.i32(i32 %insns_V_read, i32 4, i32 31)"   --->   Operation 17 'partselect' 'insns_V1' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 6.12>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%empty = zext i28 %insns_V1 to i64"   --->   Operation 18 'zext' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%ins_port_addr = getelementptr i128* %ins_port, i64 %empty"   --->   Operation 19 'getelementptr' 'ins_port_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [7/7] (6.12ns)   --->   "%ins_port_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i128P(i128* %ins_port_addr, i32 %insn_count_read)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:148]   --->   Operation 20 'readreq' 'ins_port_addr_rd_req' <Predicate = true> <Delay = 6.12> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 6.12>
+ST_3 : Operation 21 [6/7] (6.12ns)   --->   "%ins_port_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i128P(i128* %ins_port_addr, i32 %insn_count_read)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:148]   --->   Operation 21 'readreq' 'ins_port_addr_rd_req' <Predicate = true> <Delay = 6.12> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 6.12>
+ST_4 : Operation 22 [5/7] (6.12ns)   --->   "%ins_port_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i128P(i128* %ins_port_addr, i32 %insn_count_read)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:148]   --->   Operation 22 'readreq' 'ins_port_addr_rd_req' <Predicate = true> <Delay = 6.12> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 6.12>
+ST_5 : Operation 23 [4/7] (6.12ns)   --->   "%ins_port_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i128P(i128* %ins_port_addr, i32 %insn_count_read)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:148]   --->   Operation 23 'readreq' 'ins_port_addr_rd_req' <Predicate = true> <Delay = 6.12> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 6.12>
+ST_6 : Operation 24 [3/7] (6.12ns)   --->   "%ins_port_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i128P(i128* %ins_port_addr, i32 %insn_count_read)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:148]   --->   Operation 24 'readreq' 'ins_port_addr_rd_req' <Predicate = true> <Delay = 6.12> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 6.12>
+ST_7 : Operation 25 [2/7] (6.12ns)   --->   "%ins_port_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i128P(i128* %ins_port_addr, i32 %insn_count_read)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:148]   --->   Operation 25 'readreq' 'ins_port_addr_rd_req' <Predicate = true> <Delay = 6.12> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 6.12>
+ST_8 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i128* %ins_port), !map !228"   --->   Operation 26 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %insn_count), !map !234"   --->   Operation 27 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i128* %load_queue_V_V), !map !240"   --->   Operation 28 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i128* %gemm_queue_V_V), !map !244"   --->   Operation 29 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i128* %store_queue_V_V), !map !248"   --->   Operation 30 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([6 x i8]* @fetch_str) nounwind"   --->   Operation 31 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %insn_count, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [12 x i8]* @p_str2, [3 x i8]* @p_str3, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:138]   --->   Operation 32 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %ins_port, [6 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str5, [6 x i8]* @p_str6, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:139]   --->   Operation 33 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %insns_V, [10 x i8]* @mode, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @bundle, [6 x i8]* @p_str6, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:139]   --->   Operation 34 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %load_queue_V_V, [5 x i8]* @p_str7, i32 1, i32 1, [5 x i8]* @p_str8, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:140]   --->   Operation 35 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %gemm_queue_V_V, [5 x i8]* @p_str7, i32 1, i32 1, [5 x i8]* @p_str8, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:141]   --->   Operation 36 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %store_queue_V_V, [5 x i8]* @p_str7, i32 1, i32 1, [5 x i8]* @p_str8, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:142]   --->   Operation 37 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [12 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:143]   --->   Operation 38 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 39 [1/7] (6.12ns)   --->   "%ins_port_addr_rd_req = call i1 @_ssdm_op_ReadReq.m_axi.i128P(i128* %ins_port_addr, i32 %insn_count_read)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:148]   --->   Operation 39 'readreq' 'ins_port_addr_rd_req' <Predicate = true> <Delay = 6.12> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 40 [1/1] (1.76ns)   --->   "br label %1" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:145]   --->   Operation 40 'br' <Predicate = true> <Delay = 1.76>
+
+State 9 <SV = 8> <Delay = 2.55>
+ST_9 : Operation 41 [1/1] (0.00ns)   --->   "%pc_0 = phi i32 [ 0, %0 ], [ %pc, %INSN_DECODE_end ]"   --->   Operation 41 'phi' 'pc_0' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 42 [1/1] (2.47ns)   --->   "%icmp_ln145 = icmp eq i32 %pc_0, %insn_count_read" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:145]   --->   Operation 42 'icmp' 'icmp_ln145' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 43 [1/1] (2.55ns)   --->   "%pc = add nsw i32 %pc_0, 1" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:145]   --->   Operation 43 'add' 'pc' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 44 [1/1] (0.00ns)   --->   "br i1 %icmp_ln145, label %10, label %INSN_DECODE_begin" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:145]   --->   Operation 44 'br' <Predicate = true> <Delay = 0.00>
+
+State 10 <SV = 9> <Delay = 6.12>
+ST_10 : Operation 45 [1/1] (6.12ns)   --->   "%raw_insn = call i128 @_ssdm_op_Read.m_axi.i128P(i128* %ins_port_addr)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:148]   --->   Operation 45 'read' 'raw_insn' <Predicate = true> <Delay = 6.12> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 46 [1/1] (0.00ns)   --->   "%opcode_V = trunc i128 %raw_insn to i3" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:152]   --->   Operation 46 'trunc' 'opcode_V' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 47 [1/1] (0.00ns)   --->   "%memory_type_V = call i3 @_ssdm_op_PartSelect.i3.i128.i32.i32(i128 %raw_insn, i32 7, i32 9)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:153]   --->   Operation 47 'partselect' 'memory_type_V' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 2.60>
+ST_11 : Operation 48 [1/1] (1.13ns)   --->   "%icmp_ln879 = icmp eq i3 %opcode_V, 1" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:155]   --->   Operation 48 'icmp' 'icmp_ln879' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 49 [1/1] (0.00ns)   --->   "br i1 %icmp_ln879, label %2, label %3" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:155]   --->   Operation 49 'br' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 50 [1/1] (1.13ns)   --->   "%icmp_ln879_1 = icmp eq i3 %opcode_V, 0" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:157]   --->   Operation 50 'icmp' 'icmp_ln879_1' <Predicate = (!icmp_ln879)> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 51 [1/1] (0.00ns)   --->   "br i1 %icmp_ln879_1, label %4, label %8" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:157]   --->   Operation 51 'br' <Predicate = (!icmp_ln879)> <Delay = 0.00>
+ST_11 : Operation 52 [1/1] (1.65ns)   --->   "%add_ln158 = add i3 %memory_type_V, -1" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:158]   --->   Operation 52 'add' 'add_ln158' <Predicate = (!icmp_ln879 & icmp_ln879_1)> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 53 [1/1] (0.00ns)   --->   "%tmp = call i2 @_ssdm_op_PartSelect.i2.i3.i32.i32(i3 %add_ln158, i32 1, i32 2)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:158]   --->   Operation 53 'partselect' 'tmp' <Predicate = (!icmp_ln879 & icmp_ln879_1)> <Delay = 0.00>
+ST_11 : Operation 54 [1/1] (0.95ns)   --->   "%icmp_ln158 = icmp eq i2 %tmp, 0" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:158]   --->   Operation 54 'icmp' 'icmp_ln158' <Predicate = (!icmp_ln879 & icmp_ln879_1)> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 55 [1/1] (0.00ns)   --->   "br i1 %icmp_ln158, label %5, label %6" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:158]   --->   Operation 55 'br' <Predicate = (!icmp_ln879 & icmp_ln879_1)> <Delay = 0.00>
+
+State 12 <SV = 11> <Delay = 0.00>
+ST_12 : Operation 56 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i128P(i128* %gemm_queue_V_V, i128 %raw_insn)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:164]   --->   Operation 56 'write' <Predicate = (!icmp_ln879 & !icmp_ln879_1)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_12 : Operation 57 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i128P(i128* %gemm_queue_V_V, i128 %raw_insn)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:161]   --->   Operation 57 'write' <Predicate = (!icmp_ln879 & icmp_ln879_1 & !icmp_ln158)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_12 : Operation 58 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i128P(i128* %load_queue_V_V, i128 %raw_insn)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:159]   --->   Operation 58 'write' <Predicate = (!icmp_ln879 & icmp_ln879_1 & icmp_ln158)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_12 : Operation 59 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i128P(i128* %store_queue_V_V, i128 %raw_insn)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:156]   --->   Operation 59 'write' <Predicate = (icmp_ln879)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([12 x i8]* @p_str9) nounwind" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:145]   --->   Operation 60 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 61 [1/1] (0.00ns)   --->   "%tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str9)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:145]   --->   Operation 61 'specregionbegin' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:146]   --->   Operation 62 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 63 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i128P(i128* %gemm_queue_V_V, i128 %raw_insn)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:164]   --->   Operation 63 'write' <Predicate = (!icmp_ln879 & !icmp_ln879_1)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_13 : Operation 64 [1/1] (0.00ns)   --->   "br label %9"   --->   Operation 64 'br' <Predicate = (!icmp_ln879 & !icmp_ln879_1)> <Delay = 0.00>
+ST_13 : Operation 65 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i128P(i128* %gemm_queue_V_V, i128 %raw_insn)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:161]   --->   Operation 65 'write' <Predicate = (!icmp_ln879 & icmp_ln879_1 & !icmp_ln158)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_13 : Operation 66 [1/1] (0.00ns)   --->   "br label %7"   --->   Operation 66 'br' <Predicate = (!icmp_ln879 & icmp_ln879_1 & !icmp_ln158)> <Delay = 0.00>
+ST_13 : Operation 67 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i128P(i128* %load_queue_V_V, i128 %raw_insn)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:159]   --->   Operation 67 'write' <Predicate = (!icmp_ln879 & icmp_ln879_1 & icmp_ln158)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_13 : Operation 68 [1/1] (0.00ns)   --->   "br label %7" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:160]   --->   Operation 68 'br' <Predicate = (!icmp_ln879 & icmp_ln879_1 & icmp_ln158)> <Delay = 0.00>
+ST_13 : Operation 69 [1/1] (0.00ns)   --->   "br label %9" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:163]   --->   Operation 69 'br' <Predicate = (!icmp_ln879 & icmp_ln879_1)> <Delay = 0.00>
+ST_13 : Operation 70 [1/1] (0.00ns)   --->   "br label %INSN_DECODE_end"   --->   Operation 70 'br' <Predicate = (!icmp_ln879)> <Delay = 0.00>
+ST_13 : Operation 71 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i128P(i128* %store_queue_V_V, i128 %raw_insn)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:156]   --->   Operation 71 'write' <Predicate = (icmp_ln879)> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_13 : Operation 72 [1/1] (0.00ns)   --->   "br label %INSN_DECODE_end" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:157]   --->   Operation 72 'br' <Predicate = (icmp_ln879)> <Delay = 0.00>
+ST_13 : Operation 73 [1/1] (0.00ns)   --->   "%empty_8 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str9, i32 %tmp_1)" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:166]   --->   Operation 73 'specregionend' 'empty_8' <Predicate = (!icmp_ln145)> <Delay = 0.00>
+ST_13 : Operation 74 [1/1] (0.00ns)   --->   "br label %1" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:145]   --->   Operation 74 'br' <Predicate = (!icmp_ln145)> <Delay = 0.00>
+
+State 14 <SV = 9> <Delay = 0.00>
+ST_14 : Operation 75 [1/1] (0.00ns)   --->   "ret void" [/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:167]   --->   Operation 75 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 7ns, clock uncertainty: 0.875ns.
+
+ <State 1>: 1ns
+The critical path consists of the following:
+	s_axi read on port 'insns_V' [7]  (1 ns)
+
+ <State 2>: 6.12ns
+The critical path consists of the following:
+	'getelementptr' operation ('ins_port_addr') [11]  (0 ns)
+	bus request on port 'ins_port' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:148) [25]  (6.12 ns)
+
+ <State 3>: 6.12ns
+The critical path consists of the following:
+	bus request on port 'ins_port' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:148) [25]  (6.12 ns)
+
+ <State 4>: 6.12ns
+The critical path consists of the following:
+	bus request on port 'ins_port' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:148) [25]  (6.12 ns)
+
+ <State 5>: 6.12ns
+The critical path consists of the following:
+	bus request on port 'ins_port' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:148) [25]  (6.12 ns)
+
+ <State 6>: 6.12ns
+The critical path consists of the following:
+	bus request on port 'ins_port' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:148) [25]  (6.12 ns)
+
+ <State 7>: 6.12ns
+The critical path consists of the following:
+	bus request on port 'ins_port' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:148) [25]  (6.12 ns)
+
+ <State 8>: 6.12ns
+The critical path consists of the following:
+	bus request on port 'ins_port' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:148) [25]  (6.12 ns)
+
+ <State 9>: 2.55ns
+The critical path consists of the following:
+	'phi' operation ('pc') with incoming values : ('pc', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:145) [28]  (0 ns)
+	'add' operation ('pc', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:145) [30]  (2.55 ns)
+
+ <State 10>: 6.12ns
+The critical path consists of the following:
+	bus read on port 'ins_port' (/mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:148) [36]  (6.12 ns)
+
+ <State 11>: 2.61ns
+The critical path consists of the following:
+	'add' operation ('add_ln158', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:158) [48]  (1.65 ns)
+	'icmp' operation ('icmp_ln158', /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/xilinx/../../hardware/xilinx/src/vta.cc:158) [50]  (0.959 ns)
+
+ <State 12>: 0ns
+The critical path consists of the following:
+
+ <State 13>: 0ns
+The critical path consists of the following:
+
+ <State 14>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

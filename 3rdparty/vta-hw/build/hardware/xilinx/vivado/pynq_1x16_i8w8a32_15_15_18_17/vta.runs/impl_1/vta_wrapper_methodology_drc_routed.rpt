@@ -1,0 +1,163 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
+| Date         : Thu Jun 20 14:26:42 2024
+| Host         : Pepsi running 64-bit Ubuntu 20.04.5 LTS
+| Command      : report_methodology -file vta_wrapper_methodology_drc_routed.rpt -pb vta_wrapper_methodology_drc_routed.pb -rpx vta_wrapper_methodology_drc_routed.rpx
+| Design       : vta_wrapper
+| Device       : xc7z020clg484-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 25
++-----------+------------------+----------------------------------------------------+------------+
+| Rule      | Severity         | Description                                        | Violations |
++-----------+------------------+----------------------------------------------------+------------+
+| TIMING-2  | Critical Warning | Invalid primary clock source pin                   | 1          |
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
+| PDRC-190  | Warning          | Suboptimally placed synchronized register chain    | 7          |
+| TIMING-16 | Warning          | Large setup violation                              | 16         |
++-----------+------------------+----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-2#1 Critical Warning
+Invalid primary clock source pin  
+A primary clock vta_i/pll_clk/inst/clk_in1 is created on an inappropriate pin vta_i/pll_clk/inst/clk_in1. It is recommended to create a primary clock only on a proper clock source (input port or primitive output pin with no timing arc)
+Related violations: <none>
+
+TIMING-4#1 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock vta_i/pll_clk/inst/clk_in1 is defined downstream of clock clk_fpga_0 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell vta_i/g2l_queue/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X110Y140 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell vta_i/g2l_queue/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell vta_i/g2s_queue/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X102Y143 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell vta_i/g2s_queue/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#3 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell vta_i/gemm_queue/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X43Y124 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell vta_i/gemm_queue/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#4 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell vta_i/l2g_queue/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X51Y138 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell vta_i/l2g_queue/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#5 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell vta_i/load_queue/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X39Y138 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell vta_i/load_queue/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#6 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell vta_i/s2g_queue/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X27Y147 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell vta_i/s2g_queue/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#7 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell vta_i/store_queue/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d2_reg in site SLICE_X29Y143 is part of a synchronized register chain that is suboptimally placed as the load FDSE cell vta_i/store_queue/U0/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/grstd1.grst_full.grst_f.rst_d3_reg is not placed in the same (SLICE) site.
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.041 ns between vta_i/compute_0/inst/ap_CS_fsm_reg[25]/C (clocked by clk_out1_vta_pll_clk_0) and vta_i/compute_0/inst/acc_mem_V_U/compute_acc_mem_V_ram_U/genblk1[1].ram_reg_24/WEBWE[0] (clocked by clk_out1_vta_pll_clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.041 ns between vta_i/compute_0/inst/ap_CS_fsm_reg[25]/C (clocked by clk_out1_vta_pll_clk_0) and vta_i/compute_0/inst/acc_mem_V_U/compute_acc_mem_V_ram_U/genblk1[1].ram_reg_24/WEBWE[1] (clocked by clk_out1_vta_pll_clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.127 ns between vta_i/compute_0/inst/ap_CS_fsm_reg[25]/C (clocked by clk_out1_vta_pll_clk_0) and vta_i/compute_0/inst/acc_mem_V_U/compute_acc_mem_V_ram_U/genblk1[1].ram_reg_7/WEBWE[1] (clocked by clk_out1_vta_pll_clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.140 ns between vta_i/compute_0/inst/ap_CS_fsm_reg[25]/C (clocked by clk_out1_vta_pll_clk_0) and vta_i/compute_0/inst/acc_mem_V_U/compute_acc_mem_V_ram_U/genblk1[1].ram_reg_7/WEBWE[0] (clocked by clk_out1_vta_pll_clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.146 ns between vta_i/compute_0/inst/ap_CS_fsm_reg[25]/C (clocked by clk_out1_vta_pll_clk_0) and vta_i/compute_0/inst/acc_mem_V_U/compute_acc_mem_V_ram_U/genblk1[1].ram_reg_2/WEBWE[0] (clocked by clk_out1_vta_pll_clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.146 ns between vta_i/compute_0/inst/ap_CS_fsm_reg[25]/C (clocked by clk_out1_vta_pll_clk_0) and vta_i/compute_0/inst/acc_mem_V_U/compute_acc_mem_V_ram_U/genblk1[1].ram_reg_2/WEBWE[1] (clocked by clk_out1_vta_pll_clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -1.158 ns between vta_i/compute_0/inst/ap_CS_fsm_reg[25]/C (clocked by clk_out1_vta_pll_clk_0) and vta_i/compute_0/inst/acc_mem_V_U/compute_acc_mem_V_ram_U/genblk1[1].ram_reg_3/WEBWE[0] (clocked by clk_out1_vta_pll_clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -1.158 ns between vta_i/compute_0/inst/ap_CS_fsm_reg[25]/C (clocked by clk_out1_vta_pll_clk_0) and vta_i/compute_0/inst/acc_mem_V_U/compute_acc_mem_V_ram_U/genblk1[1].ram_reg_3/WEBWE[1] (clocked by clk_out1_vta_pll_clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -1.259 ns between vta_i/compute_0/inst/ap_CS_fsm_reg[25]/C (clocked by clk_out1_vta_pll_clk_0) and vta_i/compute_0/inst/acc_mem_V_U/compute_acc_mem_V_ram_U/genblk1[1].ram_reg_4/WEBWE[1] (clocked by clk_out1_vta_pll_clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -1.263 ns between vta_i/compute_0/inst/ap_CS_fsm_reg[25]/C (clocked by clk_out1_vta_pll_clk_0) and vta_i/compute_0/inst/acc_mem_V_U/compute_acc_mem_V_ram_U/genblk1[1].ram_reg_10/WEBWE[0] (clocked by clk_out1_vta_pll_clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -1.263 ns between vta_i/compute_0/inst/ap_CS_fsm_reg[25]/C (clocked by clk_out1_vta_pll_clk_0) and vta_i/compute_0/inst/acc_mem_V_U/compute_acc_mem_V_ram_U/genblk1[1].ram_reg_10/WEBWE[1] (clocked by clk_out1_vta_pll_clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -1.264 ns between vta_i/compute_0/inst/ap_CS_fsm_reg[25]/C (clocked by clk_out1_vta_pll_clk_0) and vta_i/compute_0/inst/acc_mem_V_U/compute_acc_mem_V_ram_U/genblk1[1].ram_reg_5/WEBWE[0] (clocked by clk_out1_vta_pll_clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -1.264 ns between vta_i/compute_0/inst/ap_CS_fsm_reg[25]/C (clocked by clk_out1_vta_pll_clk_0) and vta_i/compute_0/inst/acc_mem_V_U/compute_acc_mem_V_ram_U/genblk1[1].ram_reg_5/WEBWE[1] (clocked by clk_out1_vta_pll_clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -1.288 ns between vta_i/compute_0/inst/ap_CS_fsm_reg[25]/C (clocked by clk_out1_vta_pll_clk_0) and vta_i/compute_0/inst/acc_mem_V_U/compute_acc_mem_V_ram_U/genblk1[1].ram_reg_4/WEBWE[0] (clocked by clk_out1_vta_pll_clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -1.426 ns between vta_i/compute_0/inst/ap_CS_fsm_reg[25]/C (clocked by clk_out1_vta_pll_clk_0) and vta_i/compute_0/inst/acc_mem_V_U/compute_acc_mem_V_ram_U/genblk1[1].ram_reg_14/WEBWE[0] (clocked by clk_out1_vta_pll_clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -1.426 ns between vta_i/compute_0/inst/ap_CS_fsm_reg[25]/C (clocked by clk_out1_vta_pll_clk_0) and vta_i/compute_0/inst/acc_mem_V_U/compute_acc_mem_V_ram_U/genblk1[1].ram_reg_14/WEBWE[1] (clocked by clk_out1_vta_pll_clk_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+

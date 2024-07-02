@@ -1,0 +1,34 @@
+[0m[[0m[0minfo[0m] [0m[0mscalastyle using config /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/scalastyle-config.xml[0m
+[0m[[0m[0mdebug[0m] [0m[0mStarting scalastyle[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/AluTest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/AluTest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/GemmTest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/GemmTest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/Generic.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/Generic.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/Launcher.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/Launcher.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/MvmTest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/MvmTest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/SyncQueue2PortMemTest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/SyncQueue2PortMemTest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/SyncQueueTest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/SyncQueueTest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/TensorAluTest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/TensorAluTest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/TensorGemmJsonTest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/TensorGemmJsonTest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/TensorGemmTest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/TensorGemmTest.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/utils/Helper.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/utils/Helper.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/utils/RandomArray.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/utils/RandomArray.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mstart file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/utils/TestRunner.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0mend file /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/src/test/scala/unittest/utils/TestRunner.scala[0m
+[0m[[0m[0minfo[0m] [0m[0mscalastyle Processed 13 file(s)[0m
+[0m[[0m[0minfo[0m] [0m[0mscalastyle Found 0 errors[0m
+[0m[[0m[0minfo[0m] [0m[0mscalastyle Found 0 warnings[0m
+[0m[[0m[0minfo[0m] [0m[0mscalastyle Found 0 infos[0m
+[0m[[0m[0minfo[0m] [0m[0mscalastyle Finished in 17 ms[0m
+[0m[[0m[32msuccess[0m] [0m[0mcreated output: /mnt/e/_AI/tvm/3rdparty/vta-hw/hardware/chisel/target[0m

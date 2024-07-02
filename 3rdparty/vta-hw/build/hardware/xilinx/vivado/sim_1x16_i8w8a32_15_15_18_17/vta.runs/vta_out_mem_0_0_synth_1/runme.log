@@ -1,0 +1,17 @@
+
+*** Running vivado
+    with args -log vta_out_mem_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source vta_out_mem_0_0.tcl
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source vta_out_mem_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/mnt/e/_AI/tvm/3rdparty/vta-hw/build/hardware/xilinx/vivado/sim_1x16_i8w8a32_15_15_18_17/ip_lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/mnt/e/_AI/tools/Xilinx/Vivado/2020.1/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:00.80 ; elapsed = 00:00:07 . Memory (MB): peak = 2070.844 ; gain = 0.000 ; free physical = 2968 ; free virtual = 4588
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP vta_out_mem_0_0, cache-ID = e6f9ac021cf796da.
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 20 10:28:24 2024...
