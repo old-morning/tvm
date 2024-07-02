@@ -1,0 +1,5 @@
+if(EXISTS "/mnt/e/_AI/tvm/build/cpptest[1]_tests.cmake")
+  include("/mnt/e/_AI/tvm/build/cpptest[1]_tests.cmake")
+else()
+  add_test(cpptest_NOT_BUILT cpptest_NOT_BUILT)
+endif()

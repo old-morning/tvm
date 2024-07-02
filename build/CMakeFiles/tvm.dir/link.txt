@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -std=c++17 -faligned-new -O2 -Wall -fPIC  -Wl,--no-undefined -shared -Wl,-soname,libtvm.so -o libtvm.so @CMakeFiles/tvm.dir/objects1.rsp  -Wl,-rpath,/usr/lib/llvm-10/lib: libbacktrace/lib/libbacktrace.a /usr/lib/llvm-10/lib/libLLVM-10.so -ldl -lpthread

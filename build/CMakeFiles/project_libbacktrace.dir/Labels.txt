@@ -1,0 +1,14 @@
+# Target labels
+ project_libbacktrace
+# Source files and their labels
+/mnt/e/_AI/tvm/build/CMakeFiles/project_libbacktrace
+/mnt/e/_AI/tvm/build/CMakeFiles/project_libbacktrace.rule
+/mnt/e/_AI/tvm/build/CMakeFiles/project_libbacktrace-complete.rule
+/mnt/e/_AI/tvm/build/libbacktrace/src/project_libbacktrace-stamp/project_libbacktrace-build.rule
+/mnt/e/_AI/tvm/build/libbacktrace/src/project_libbacktrace-stamp/project_libbacktrace-checkout.rule
+/mnt/e/_AI/tvm/build/libbacktrace/src/project_libbacktrace-stamp/project_libbacktrace-configure.rule
+/mnt/e/_AI/tvm/build/libbacktrace/src/project_libbacktrace-stamp/project_libbacktrace-download.rule
+/mnt/e/_AI/tvm/build/libbacktrace/src/project_libbacktrace-stamp/project_libbacktrace-install.rule
+/mnt/e/_AI/tvm/build/libbacktrace/src/project_libbacktrace-stamp/project_libbacktrace-mkdir.rule
+/mnt/e/_AI/tvm/build/libbacktrace/src/project_libbacktrace-stamp/project_libbacktrace-patch.rule
+/mnt/e/_AI/tvm/build/libbacktrace/src/project_libbacktrace-stamp/project_libbacktrace-update.rule
